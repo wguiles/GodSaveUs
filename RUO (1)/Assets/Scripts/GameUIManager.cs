@@ -70,7 +70,7 @@ public class GameUIManager : MonoBehaviour
     public void UpdateCheeseAmount(int amount)
     {
         amount = FindObjectOfType<PlayerStats>().GetCheeseCount();
-        playerCheeseAmount.text = "Cheese: " +  amount.ToString();
+        playerCheeseAmount.text = amount.ToString();
     }
 
 }

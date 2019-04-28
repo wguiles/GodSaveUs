@@ -64,15 +64,14 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void StopAllSounds(string clipName)
+    public void StopAllSounds()
     {
         foreach (Sound s in sounds)
         {
-            if (s.name == clipName)
-            {
+
                 s.source.Stop();
                 break;
-            }
+
         }
     }
 
