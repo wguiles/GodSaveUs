@@ -44,6 +44,8 @@ public class PlayerController : MonoBehaviour
     public int slashDamage = 2;
     public int mineDamage = 6;
 
+    private bool triggerInUse;
+
     void Start()
     {
         GetComponentInChildren<Animator>().SetTrigger("Idle");
@@ -102,8 +104,9 @@ public class PlayerController : MonoBehaviour
                     hit = new RaycastHit();
                 }
 
-                if (canMelee && (Input.GetButtonDown("Right Bumper") || Input.GetButton("X Button Windows")))
+                if (canMelee && (Input.GetAxis("Right Trigger") >= 1.0f && !triggerInUse))
                 {
+                    triggerInUse = true;
                     StartCoroutine(Attack());
                 }
                 else if (Input.GetButton("Y Button") && fireTime > 1.0f
@@ -123,7 +126,10 @@ public class PlayerController : MonoBehaviour
             SwitchObjectives();
         }
 
-      
+        if (Input.GetAxis("Right Trigger") <= 0.0f)
+        {
+            triggerInUse = false;
+        }
     }
 
     public int GetSlashDamage()

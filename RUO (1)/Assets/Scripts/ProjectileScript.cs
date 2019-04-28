@@ -15,16 +15,20 @@ public class ProjectileScript : MonoBehaviour
     [SerializeField]
     private float detonationTime;
 
+    private bool triggerInUse;
 
     // Update is called once per frame
     void Update()
     {
         transform.Translate(new Vector3(0f, projectileSpeed * Time.deltaTime, 0f));
 
-        if (Input.GetButtonUp("Right Bumper"))
+        if (Input.GetAxis("Right Trigger") <= 0.0f && !triggerInUse)
         {
+            triggerInUse = true;
             StartCoroutine(Detonate());
         }
+
+        
     }
 
     public void SetTransformUp(Vector3 vecToSet)
