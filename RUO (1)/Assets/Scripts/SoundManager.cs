@@ -64,7 +64,7 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void StopAllSounds()
+    public void StopAllSounds(string clipName)
     {
         foreach (Sound s in sounds)
         {
