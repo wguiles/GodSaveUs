@@ -31,6 +31,12 @@ public class LevelStats : MonoBehaviour
 
     }
 
+    private void OnEnable()
+    {
+        SoundManager.instance.StopAllSounds();
+        SoundManager.instance.PlaySound("GameplayMusic");
+    }
+
     public void StartCountdown()
     {
         StartCoroutine(CountDown());

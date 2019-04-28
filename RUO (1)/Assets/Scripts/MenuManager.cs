@@ -73,7 +73,7 @@ public class MenuManager : MonoBehaviour
 
     public void LoadLevel(int Faction)
     {
-        SoundManager.instance.PlaySound("GameplayMusic");
+       
 
         //Deactivate targets from previous level
         DeactivateTargets();
