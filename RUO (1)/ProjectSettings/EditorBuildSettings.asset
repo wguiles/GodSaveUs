@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/Scenes/NewNicoleTest.unity
+    guid: fbd76ecdd9f1032489ef5f7e5b36f958
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/Scenes/PlayerChoice.unity
+    guid: 218eb9067087b4598ac6b4439d1fef71
+  - enabled: 0
+    path: Assets/Scenes/MouseScene.unity
+    guid: 20ce9d6029a604a7b800ff96f81982d6
+  - enabled: 0
+    path: Assets/Scenes/RatScene.unity
+    guid: e639a280b510b496090be38eef29529e
+  - enabled: 0
+    path: Assets/Scenes/PostProductionUI_2.unity
+    guid: 5d9c2cd00da2746c2a18f516720f81d9
+  - enabled: 1
+    path: Assets/Scenes/EnemyTest 2.unity
+    guid: b23bbfa3360a9485f918e721cff205cb
+  m_configObjects: {}

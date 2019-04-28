@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fb4685fc3f2e22440bc50ecc9fa1b6b3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - MouseRunner: {instanceID: 0}
+  - MouseEnforcer: {instanceID: 0}
+  - RatRunner: {instanceID: 0}
+  - RatEnforcer: {instanceID: 0}
+  - Cheese: {fileID: 1390263230913470, guid: 9dea054cf9ab3614299937c5c8a9ccc3, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

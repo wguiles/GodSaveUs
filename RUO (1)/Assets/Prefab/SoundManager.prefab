@@ -1,0 +1,161 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4830599411012169717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4830599411012169719}
+  - component: {fileID: 4830599411012169718}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4830599411012169719
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4830599411012169717}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.8943176, y: 3.1019976, z: -3.721901}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4830599411012169718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4830599411012169717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ee368b7cd5f47f0b421310a99254b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: uiClickS
+    clip: {fileID: 8300000, guid: e3d80d2a8c1891c4b9c4a46e0b6a7aee, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitch: 0.5
+  - name: PlayerHurtS
+    clip: {fileID: 8300000, guid: f1ca919ce03007b459e27f707bb89144, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitch: 0.5
+  - name: LaserSoundS
+    clip: {fileID: 8300000, guid: ca388e97c2c3a36499ebb480d944da53, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitch: 0.5
+  - name: CompleteObjS
+    clip: {fileID: 8300000, guid: b348de1260df54841b5b8e5fc43e3a0b, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitch: 0.5
+  - name: BulletSoundS
+    clip: {fileID: 8300000, guid: 808324a0947434b2f80701bb015082f5, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitch: 1
+  - name: EnemyHurtS
+    clip: {fileID: 8300000, guid: ed8a567d95682d142b6f0d1e30da73b7, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitch: 0.5
+  - name: StartGameS
+    clip: {fileID: 8300000, guid: 942d3ba2fcf37484cb9d6810ff3701db, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitch: 0.5
+  - name: SlashS
+    clip: {fileID: 8300000, guid: a2e8dd3dbd86c8d4fa21e26e1f0d4341, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitch: 0.5
+  - name: DashAttackS
+    clip: {fileID: 8300000, guid: b7f72d27318894bf88922c2111535070, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitch: 1
+  - name: GetCheeseS
+    clip: {fileID: 8300000, guid: a5bb091b4ad08704eaa2c9157d48b041, type: 3}
+    source: {fileID: 0}
+    volume: 0.3
+    pitch: 0.5
+  - name: EnemyDeath
+    clip: {fileID: 8300000, guid: 0193fc07d97944cbb880f9fb105c18de, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitch: 1
+  - name: EnemyDetectedPlayer
+    clip: {fileID: 8300000, guid: 409580bb0a5404605893c1eea0e22dfa, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitch: 1
+  - name: EnemyFired
+    clip: {fileID: 8300000, guid: fee55c67e55f44fb3893028c334fb062, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitch: 1
+  - name: EnemyDamage1
+    clip: {fileID: 8300000, guid: b7f5a30ba139145a9b137d512c4b09a8, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitch: 1
+  - name: EnemyDamage2
+    clip: {fileID: 8300000, guid: f024101e6736841bc9679107216cbaf0, type: 3}
+    source: {fileID: 0}
+    volume: 0
+    pitch: 0
+  - name: EnemyDamage3
+    clip: {fileID: 8300000, guid: 0690681bd7a464ae8aaa40a2dd6cd106, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitch: 1
+  - name: EnemyDamage4
+    clip: {fileID: 8300000, guid: 8d51cbfbf28974ad89e3e56d656b27eb, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitch: 1
+  - name: EnemyDeath
+    clip: {fileID: 8300000, guid: b8216be3adbab4c76b00df54c9c05d20, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitch: 1
+  - name: CollectCheese
+    clip: {fileID: 8300000, guid: b8693793d4421704785af6f576c0a6c3, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitch: 1
+  - name: Pla
+    clip: {fileID: 8300000, guid: b8693793d4421704785af6f576c0a6c3, type: 3}
+    source: {fileID: 0}
+    volume: 0
+    pitch: 0
+  - name: GoBack
+    clip: {fileID: 8300000, guid: b8693793d4421704785af6f576c0a6c3, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitch: 1
+  - name: Navigate
+    clip: {fileID: 8300000, guid: b8693793d4421704785af6f576c0a6c3, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitch: 1
+  - name: Select
+    clip: {fileID: 8300000, guid: b8693793d4421704785af6f576c0a6c3, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitch: 1

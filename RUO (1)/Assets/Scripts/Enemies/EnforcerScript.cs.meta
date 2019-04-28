@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 40b4312b7a1266b459874f8962286cda
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - agent: {instanceID: 0}
+  - enemyHealthBar: {instanceID: 0}
+  - CheeseStuff: {fileID: 1390263230913470, guid: 169deb98579fd5f45ba61a43a4ae6602,
+      type: 3}
+  - target: {instanceID: 0}
+  - playerStats: {instanceID: 0}
+  - _animator: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
