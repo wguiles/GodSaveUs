@@ -74,6 +74,7 @@ public class SoundManager : MonoBehaviour
 
     public void OnValueChanged()
     {
+        PlaySound("uiClickS");
         foreach (Sound s in sounds)
         {
             s.source.volume = slider.value;
