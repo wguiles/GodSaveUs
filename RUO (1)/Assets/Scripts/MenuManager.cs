@@ -41,7 +41,7 @@ public class MenuManager : MonoBehaviour
     {
         //GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().SetCanMove(false);
 
-        if (!levelCompleteScreen.activeSelf)
+        if (levelCompleteScreen != null && !levelCompleteScreen.activeSelf)
         {
             levelCompleteScreen.SetActive(true);
             levelCompleteScreenText.text = text;

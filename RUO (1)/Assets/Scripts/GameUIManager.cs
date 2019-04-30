@@ -55,10 +55,8 @@ public class GameUIManager : MonoBehaviour
 
     private void setQuotaText()
     {
-        quotaText.text = FindObjectOfType<LevelStats>().cheeseLevelQuota.ToString();
+        //quotaText.text = FindObjectOfType<LevelStats>().cheeseLevelQuota.ToString();
     }
-
-
 
 
     public void SetTimeRemaining(float TimeRemaining)

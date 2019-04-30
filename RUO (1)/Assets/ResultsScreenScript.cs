@@ -29,6 +29,12 @@ public class ResultsScreenScript : MonoBehaviour
         
     }
 
+    private void OnEnable()
+    {
+        Debug.Log("Results Screen Sound Called");
+        SoundManager.instance.PlaySound("BarFillUp");
+    }
+
     // Update is called once per frame
     void Update()
     {

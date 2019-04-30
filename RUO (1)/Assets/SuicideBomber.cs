@@ -41,6 +41,8 @@ public class SuicideBomber : BasicRatEnforcer
 
         while (timesToFlash <= detonationTime)
         {
+            SoundManager.instance.PlaySound("RatExplosionBeep");
+
             for (int i = 0; i < bombLights.Length; i ++)
             {
                 bombLights[i].color = Color.red;

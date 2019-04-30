@@ -176,6 +176,7 @@ public class EnemyStats : MonoBehaviour
             //assignedObjective.Complete();
             isTarget = false;
             numCheese = 20;
+            SoundManager.instance.PlaySound("KillConfirmed");
             SpawnTargetScript.instance.SetTargetIsActive(false);
         }
 

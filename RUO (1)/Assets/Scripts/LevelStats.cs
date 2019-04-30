@@ -48,8 +48,9 @@ public class LevelStats : MonoBehaviour
 
         while(secondsLeft > 0)
         {
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(0.5f);
             secondsLeft--;
+            SoundManager.instance.PlaySound("Countdown");
             textCountDown.text = secondsLeft.ToString();
         }
 
@@ -146,7 +147,12 @@ public class LevelStats : MonoBehaviour
         {
             gameObject.SetActive(false);
 
+
+
+            SoundManager.instance.StopAllSounds();
             ResultsPanel.SetActive(true);
+            SoundManager.instance.PlaySound("ResultsMusic");
+
             ResultsPanel.GetComponent<ResultsScreenScript>().FillBar();
 
             levelComplete = true;

@@ -27,8 +27,8 @@ public class IntroScreen : MonoBehaviour
 
     IEnumerator WaitToLoadStartScreen()
     {
-        yield return new WaitForSeconds(33.0f);
-        startMenuEventSystem.SetActive(true);
+        yield return new WaitForSeconds(50.0f);
+        SkipIntro();
     }
 
     private void SkipIntro()
