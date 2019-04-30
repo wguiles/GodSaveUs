@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
                     {
                     Vector3 directionToPlayer = (transform.position - g.transform.position);
 
-                    g.transform.Translate(directionToPlayer * Time.deltaTime * 3f);
+                    g.transform.Translate(directionToPlayer * Time.deltaTime * 10f);
                 }
 
             }
