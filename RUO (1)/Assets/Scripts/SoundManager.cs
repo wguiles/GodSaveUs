@@ -23,7 +23,7 @@ public class SoundManager : MonoBehaviour
     public static SoundManager instance;
     
     public Sound[] sounds;
-
+    public UnityEngine.UI.Slider slider;
 
     private void Awake()
     {
@@ -69,6 +69,14 @@ public class SoundManager : MonoBehaviour
         foreach (Sound s in sounds)
         {
                 s.source.Stop();
+        }
+    }
+
+    public void OnValueChanged()
+    {
+        foreach (Sound s in sounds)
+        {
+            s.source.volume = slider.value;
         }
     }
 
