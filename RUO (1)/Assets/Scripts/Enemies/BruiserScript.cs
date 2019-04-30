@@ -13,6 +13,8 @@ public class BruiserScript : EnemyStats
     private bool reachedPatrolPoint;
     private bool isAttacking;
     private bool isPatroling = true;
+    private Vector3 tetherPos;
+    public bool tethered;
 
     [SerializeField] protected GameObject[] patrolPoints; //Note: there is no setter
     
@@ -25,6 +27,11 @@ public class BruiserScript : EnemyStats
 
     void Start()
     {
+        if (Random.Range(0, 10) < 4)
+        {
+            tethered = true;
+        }
+
         initialHealth = health;
 
         transform.GetChild(1).gameObject.GetComponent<Animator>().SetTrigger("Moving");
@@ -33,6 +40,11 @@ public class BruiserScript : EnemyStats
         patrolPoints = GameObject.FindGameObjectsWithTag("BossPoint");
 
         reachedPatrolPoint = true;
+
+        if (tethered)
+        {
+            tetherPos = SpawnManager.instance.RandomSpawnerPosition();
+        }
     }
 
     // Update is called once per frame
@@ -58,9 +70,15 @@ public class BruiserScript : EnemyStats
         //    Attack();
         //}
         base.Update();
-        FollowPlayer();
 
-        
+        if (tethered)
+            agent.destination = tetherPos;
+        else
+        {
+            FollowPlayer();
+        }
+
+
     }
 
     public GameObject[] GetPatrolPoints()
@@ -71,6 +89,7 @@ public class BruiserScript : EnemyStats
     public override void TakeDamage(int amount)
     {
         //StartCoroutine(Flinch());
+        tethered = false;
 
         base.TakeDamage(amount);
     }

@@ -14,6 +14,12 @@ public class SpawnManager : MonoBehaviour
     public GameObject MouseBruiserWithShield;
     public GameObject BlueThrower;
 
+    public int RatLimit = 25;
+    public int RatCount = 0;
+
+    public int MouseLimit = 20;
+    public int MouseCount = 0;
+
     public EnemyStats.FactionType enemiesToSpawn;
 
 
@@ -25,10 +31,6 @@ public class SpawnManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-    }
-
-    void Start()
-    {
 
         spawners = new Spawner[GameObject.FindGameObjectsWithTag("Spawner").Length];
 
@@ -36,6 +38,12 @@ public class SpawnManager : MonoBehaviour
         {
             spawners[i] = GameObject.FindGameObjectsWithTag("Spawner")[i].GetComponent<Spawner>();
         }
+    }
+
+    void Start()
+    {
+
+
     }
 
     public void StartSpawning()
@@ -57,7 +65,6 @@ public class SpawnManager : MonoBehaviour
     {
         while(true)
         {
-
             yield return new WaitForSeconds(spawnRate);
 
             Spawner spawnpoint = spawners[Random.Range(0, spawners.Length)];
@@ -72,8 +79,9 @@ public class SpawnManager : MonoBehaviour
 
             int RandomNum = Random.Range(0, 10);
 
-            if (enemiesToSpawn == EnemyStats.FactionType.rat)
+            if (enemiesToSpawn == EnemyStats.FactionType.rat && RatCount < RatLimit)
             {
+                RatCount++;
                 //Spawn Rats over time
 
                 //20% suicide bombers, 30% shielded Rats, 50%
@@ -81,18 +89,22 @@ public class SpawnManager : MonoBehaviour
                 if (RandomNum <= 1)
                 {
                     spawnpoint.SpawnBunch(Random.Range(1, 2), ratWithShield);
+                    closestSpawner().SpawnBunch(Random.Range(1, 2), ratWithShield);
                 }
                 else if (RandomNum <= 6)
                 {
                     spawnpoint.SpawnBunch(Random.Range(3, 6), ratEnforcerBasic);
+                    closestSpawner().SpawnBunch(Random.Range(3, 6), ratEnforcerBasic);
                 }
                 else
                 {
                     spawnpoint.SpawnBunch(Random.Range(1, 3), suicideBomberRat);
+                    closestSpawner().SpawnBunch(Random.Range(1, 3), suicideBomberRat);
                 }
             }
-            else
+            else if (MouseCount < MouseLimit)
             {
+                MouseCount++;
                 //spawn mice over time
 
                 //33% shielded Mice, 66% normal mice
@@ -100,18 +112,24 @@ public class SpawnManager : MonoBehaviour
                 if (RandomNum <= 2)
                 {
                     spawnpoint.SpawnBunch(Random.Range(1, 3), MouseBruiserWithShield);
+                    closestSpawner().SpawnBunch(Random.Range(1, 3), MouseBruiserWithShield);
                 }
                 else
                 {
                     spawnpoint.SpawnBunch(Random.Range(1, 3), MouseBruiser);
+                    closestSpawner().SpawnBunch(Random.Range(1, 3), MouseBruiser);
                 }
             }
         }
     }
 
+    public Vector3 RandomSpawnerPosition()
+    {
+        return spawners[Random.Range(0, spawners.Length)].transform.position;
+    }
+
     public void SpawnTargetEnemy()
     {
-
         Spawner spawnpoint = spawners[Random.Range(0, spawners.Length)];
 
         while (spawnpoint.GetIsVisible())
@@ -161,5 +179,24 @@ public class SpawnManager : MonoBehaviour
                 SpawnTargetScript.instance.SpawnTarget(BlueThrower, positionToSpawn);
             }
         }
+    }
+
+
+
+    Spawner closestSpawner()
+    {
+        float closestSpawnerDistance = float.MaxValue;
+        Spawner closest = spawners[0];
+
+        foreach (Spawner s in spawners)
+        {
+            if (!s.GetIsVisible() && s.distanceToPlayer() < closestSpawnerDistance)
+            {
+                closestSpawnerDistance = s.distanceToPlayer();
+                closest = s;
+            }
+        }
+
+        return closest;
     }
 }

@@ -32,23 +32,7 @@ public class CheeseScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (FindObjectOfType<PlayerStats>() != null)
-        {
-            if (Vector3.Distance(transform.position, FindObjectOfType<PlayerStats>().transform.position) <= 6.0f)
-            {
-                MoveTowardsPlayer();
-            }
-        }
-    }
 
-    void MoveTowardsPlayer()
-    {
-        Vector3 directionToPlayer = (FindObjectOfType<PlayerStats>().transform.position - transform.position);
-
-        transform.Translate(directionToPlayer * Time.deltaTime * 3f);
-    }
 
     public int GetCheesePoints()
     {

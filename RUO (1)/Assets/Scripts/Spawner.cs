@@ -34,4 +34,16 @@ public class Spawner : MonoBehaviour
     {
         return _renderer.isVisible;
     }
+
+    public float distanceToPlayer()
+    {
+        PlayerStats player = FindObjectOfType<PlayerStats>();
+
+        if (player != null)
+        {
+            return Vector3.Distance(player.transform.position, transform.position);
+        }
+
+        return 0.0f;
+    }
 }

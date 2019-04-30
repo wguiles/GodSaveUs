@@ -115,7 +115,8 @@ public class EnemyStats : MonoBehaviour
     public virtual void TakeDamage(int amount)
     {
         //_animator = GetComponentInChildren<Animator>();
-        SoundManager.instance.PlaySound("EnemyHurtS");
+        //SoundManager.instance.PlaySound("EnemyHurtS");
+        SoundManager.instance.PlayRandomSqueak();
         StartCoroutine(Flinch());
         health -= amount;
         UpdateHealthBar();
@@ -178,6 +179,15 @@ public class EnemyStats : MonoBehaviour
             numCheese = 20;
             SoundManager.instance.PlaySound("KillConfirmed");
             SpawnTargetScript.instance.SetTargetIsActive(false);
+        }
+
+        if (faction == FactionType.rat)
+        {
+            SpawnManager.instance.RatCount--;
+        }
+        else
+        {
+            SpawnManager.instance.MouseCount--;
         }
 
         for (int i = 0; i < numCheese; i++)

@@ -23,6 +23,9 @@ public class ResultsScreenScript : MonoBehaviour
 
     public GameObject MenuButton;
 
+    private bool firstSoundPlayed;
+    private bool secondSoundPlayed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +54,13 @@ public class ResultsScreenScript : MonoBehaviour
             
             if (cheeseAmountCount >= LevelQuotaAquired)
             {
+
+                if (!firstSoundPlayed)
+                {
+                    SoundManager.instance.PlaySound("KillConfirmed");
+                    firstSoundPlayed = true;
+                }
+
                 achievementText.text = "Level Quota Aquired!";
 
                 resultsText.text = ((int)cheeseAmountCount).ToString() + " / " + UpgradeQuotaAquired.ToString();
@@ -60,11 +70,18 @@ public class ResultsScreenScript : MonoBehaviour
 
             if (cheeseAmountCount >= UpgradeQuotaAquired)
             {
+
+                if (!secondSoundPlayed)
+                {
+                    SoundManager.instance.PlaySound("KillConfirmed");
+                    secondSoundPlayed = true;
+                }
                 achievementText.text = "Upgrade Quota Aquired!";
             }
 
             if (cheeseAmountCount >= CheeseAmountAquired)
             {
+                SoundManager.instance.StopSound("BarFillUp");
                 StartCoroutine(ActivateMenuButton());
             }
           

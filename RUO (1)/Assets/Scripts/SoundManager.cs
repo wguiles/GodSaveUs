@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 [System.Serializable]
 public class Sound
 {
@@ -21,6 +23,8 @@ public class Sound
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager instance;
+
+    private string[] enemySounds = { "EnemyDamage1", "EnemyDamage2", "EnemyDamage3", "EnemyDamage4" };
     
     public Sound[] sounds;
     public UnityEngine.UI.Slider slider;
@@ -52,6 +56,11 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    public void PlayRandomSqueak()
+    {
+        PlaySound(enemySounds[Random.Range(0, enemySounds.Length)]);
+    }
+
     public void StopSound(string clipName)
     {
         foreach (Sound s in sounds)
@@ -80,6 +89,8 @@ public class SoundManager : MonoBehaviour
             s.source.volume = slider.value;
         }
     }
+
+
 
     // Start is called before the first frame update
     void Start()

@@ -55,7 +55,12 @@ public class GameUIManager : MonoBehaviour
 
     private void setQuotaText()
     {
-        //quotaText.text = FindObjectOfType<LevelStats>().cheeseLevelQuota.ToString();
+        LevelStats level = FindObjectOfType<LevelStats>();
+
+        if (level)
+        {
+            quotaText.text = level.cheeseLevelQuota.ToString();
+        }
     }
 
 

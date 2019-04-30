@@ -14,10 +14,10 @@ public class PlayerStats : MonoBehaviour
      private MenuManager menuManager;
     public GameObject DeathScreen;
 
-    int MAX_HEATLH = 20;
+    int MAX_HEATLH = 10;
 
     //general stats
-    private int health = 20;
+    private int health = 10;
     private int cheeseCount;
     private bool recovering;
 
@@ -40,6 +40,8 @@ public class PlayerStats : MonoBehaviour
     {
         MAX_HEATLH += amount;
     }
+
+
 
     //Once the player gets the melee upgrade it shows the icon
     //public void ShowMeleeIcon()
@@ -162,6 +164,8 @@ public class PlayerStats : MonoBehaviour
     private void Death()
     {
         //menuManager.ActivateLoseScreen("You Died :( ");
+        SoundManager.instance.StopAllSounds();
+        FindObjectOfType<LevelStats>().gameObject.SetActive(false);
         DeathScreen.SetActive(true);
        // Destroy(gameObject);
     }

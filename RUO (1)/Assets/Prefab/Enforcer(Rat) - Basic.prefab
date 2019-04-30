@@ -159,7 +159,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 785585697944779992}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 2.5
+  m_Radius: 1
   m_Speed: 8
   m_Acceleration: 100
   avoidancePriority: 50
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
-  health: 8
+  health: 5
   speed: 5
   attackDamage: 3
   enemyHealthBar: {fileID: 337486873307057952}
@@ -215,6 +215,7 @@ MonoBehaviour:
   playerStats: {fileID: 0}
   playerController: {fileID: 0}
   _animator: {fileID: 2583512618515697241}
+  tethered: 0
   followRange: 1000
 --- !u!1 &1425058389222572586
 GameObject:

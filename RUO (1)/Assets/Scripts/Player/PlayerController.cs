@@ -58,6 +58,7 @@ public class PlayerController : MonoBehaviour
         gunChild = transform.GetChild(0).gameObject;
         slashObject = gunChild.transform.GetChild(0).GetChild(0).gameObject;
         hit = new RaycastHit();
+
     }
 
     // Update is called once per frame
@@ -65,6 +66,19 @@ public class PlayerController : MonoBehaviour
     {
         if (gameStarted)
         {
+
+            foreach (CheeseScript g in GameObject.FindObjectsOfType<CheeseScript>())
+            {
+
+                    if (Vector3.Distance(transform.position, g.transform.position) <= 6.0f)
+                    {
+                    Vector3 directionToPlayer = (transform.position - g.transform.position);
+
+                    g.transform.Translate(directionToPlayer * Time.deltaTime * 3f);
+                }
+
+            }
+
             //RaycastHit 1f in front of player
             Physics.Raycast(this.transform.position, gunChild.transform.up, out hit, 2f);
             Debug.DrawRay(this.transform.position, gunChild.transform.up);

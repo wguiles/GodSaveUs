@@ -40,6 +40,10 @@ public class LevelStats : MonoBehaviour
     public void StartCountdown()
     {
         StartCoroutine(CountDown());
+
+       // player.transform.position = new Vector3(SpawnManager.instance.RandomSpawnerPosition().x, SpawnManager.instance.RandomSpawnerPosition().y, transform.position.z);
+            
+
     }
 
     private IEnumerator CountDown()
