@@ -161,6 +161,9 @@ public class MenuManager : MonoBehaviour
 
     public void loadScene(string sceneToLoad)
     {
+        //cancel all spawning
+        SpawnManager.instance.StopAllCoroutines();
+
         SceneManager.LoadScene(sceneToLoad);
     }
 
