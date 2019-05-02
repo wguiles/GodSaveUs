@@ -23,6 +23,8 @@ TagManager:
   - Rats_Hideout
   - Spawner
   - RatShield
+  - Level
+  - Mice_Hideout
   layers:
   - Default
   - TransparentFX
