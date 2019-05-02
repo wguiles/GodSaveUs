@@ -14,11 +14,42 @@ public class SpawnManager : MonoBehaviour
     public GameObject MouseBruiserWithShield;
     public GameObject BlueThrower;
 
-    public int RatLimit = 25;
+    [HideInInspector]
     public int RatCount = 0;
 
-    public int MouseLimit = 20;
+    [HideInInspector]
     public int MouseCount = 0;
+
+    [Header("Random Spawn Settings")]
+
+    public int RatLimit = 25;
+
+    [Range(0f, 1.0f)]
+    public float basicRatPercentage;
+
+    [Range(0f, 1.0f)]
+    public float shieldRatPercentage;
+
+    [Range(0f, 1.0f)]
+    public float suicideBomberPercentage;
+
+    public float ratSpawnRate;
+
+
+    public int MouseLimit = 20;
+
+    [Range(0f, 1.0f)]
+    public float basicMousePercentage;
+
+    [Range(0f, 1.0f)]
+    public float shieldMousePercentage;
+
+    [Range(0f, 1.0f)]
+    public float flameThrowerPercentage;
+
+    public float mouseSpawnRate;
+   
+
 
     public EnemyStats.FactionType enemiesToSpawn;
 
@@ -65,15 +96,23 @@ public class SpawnManager : MonoBehaviour
     {
         while(true)
         {
-            yield return new WaitForSeconds(spawnRate);
+
+            if (enemiesToSpawn == EnemyStats.FactionType.rat)
+            {
+                yield return new WaitForSeconds(ratSpawnRate);
+            }
+            else
+            {
+                yield return new WaitForSeconds(mouseSpawnRate);
+            }
 
             Spawner spawnpoint = spawners[Random.Range(0, spawners.Length)];
 
-            while (spawnpoint.GetIsVisible())
-            {
-                yield return new WaitForSeconds(0.1f);
-                spawnpoint = spawners[Random.Range(0, spawners.Length)];
-            }
+            //while (spawnpoint.GetIsVisible())
+            //{
+            //    yield return new WaitForSeconds(0.1f);
+            //    spawnpoint = spawners[Random.Range(0, spawners.Length)];
+            //}
 
             //check if it's rats or mice
 
@@ -86,20 +125,22 @@ public class SpawnManager : MonoBehaviour
 
                 //20% suicide bombers, 30% shielded Rats, 50%
 
-                if (RandomNum <= 1)
+                if (RandomNum <= basicRatPercentage)
                 {
                     spawnpoint.SpawnBunch(Random.Range(1, 2), ratWithShield);
-                    closestSpawner().SpawnBunch(Random.Range(1, 2), ratWithShield);
+                    //closestSpawner().SpawnBunch(Random.Range(1, 2), ratWithShield);
                 }
-                else if (RandomNum <= 6)
+
+                if (RandomNum <= shieldRatPercentage)
                 {
                     spawnpoint.SpawnBunch(Random.Range(3, 6), ratEnforcerBasic);
-                    closestSpawner().SpawnBunch(Random.Range(3, 6), ratEnforcerBasic);
+                    //closestSpawner().SpawnBunch(Random.Range(3, 6), ratEnforcerBasic);
                 }
-                else
+
+                if (RandomNum <= suicideBomberPercentage)
                 {
                     spawnpoint.SpawnBunch(Random.Range(1, 3), suicideBomberRat);
-                    closestSpawner().SpawnBunch(Random.Range(1, 3), suicideBomberRat);
+                    //closestSpawner().SpawnBunch(Random.Range(1, 3), suicideBomberRat);
                 }
             }
             else if (MouseCount < MouseLimit)
@@ -109,15 +150,16 @@ public class SpawnManager : MonoBehaviour
 
                 //33% shielded Mice, 66% normal mice
 
-                if (RandomNum <= 2)
+                if (RandomNum <= basicMousePercentage)
                 {
                     spawnpoint.SpawnBunch(Random.Range(1, 3), MouseBruiserWithShield);
-                    closestSpawner().SpawnBunch(Random.Range(1, 3), MouseBruiserWithShield);
+                    //closestSpawner().SpawnBunch(Random.Range(1, 3), MouseBruiserWithShield);
                 }
-                else
+
+                if (RandomNum <= shieldRatPercentage)
                 {
                     spawnpoint.SpawnBunch(Random.Range(1, 3), MouseBruiser);
-                    closestSpawner().SpawnBunch(Random.Range(1, 3), MouseBruiser);
+                    //closestSpawner().SpawnBunch(Random.Range(1, 3), MouseBruiser);
                 }
             }
         }

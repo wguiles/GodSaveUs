@@ -70,7 +70,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 7938b5cc18d2f44dc9b46f2aeb8ca4fc, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -275,6 +275,7 @@ MonoBehaviour:
   _animator: {fileID: 3055007931428274596}
   mouseBabies: {fileID: 8801533494593558317, guid: f73c842439e75417d894306f600dd2cc,
     type: 3}
+  tethered: 0
   patrolPoints: []
 --- !u!95 &8003301437874803310
 Animator:
