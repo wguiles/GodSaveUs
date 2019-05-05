@@ -125,38 +125,38 @@ public class SpawnManager : MonoBehaviour
 
                 //20% suicide bombers, 30% shielded Rats, 50%
 
-                if (RandomNum <= basicRatPercentage)
+                if (RandomNum > basicRatPercentage)
                 {
                     spawnpoint.SpawnBunch(Random.Range(1, 2), ratWithShield);
                     //closestSpawner().SpawnBunch(Random.Range(1, 2), ratWithShield);
                 }
 
-                if (RandomNum <= shieldRatPercentage)
+                if (RandomNum > shieldRatPercentage)
                 {
                     spawnpoint.SpawnBunch(Random.Range(3, 6), ratEnforcerBasic);
                     //closestSpawner().SpawnBunch(Random.Range(3, 6), ratEnforcerBasic);
                 }
 
-                if (RandomNum <= suicideBomberPercentage)
+                if (RandomNum > suicideBomberPercentage)
                 {
                     spawnpoint.SpawnBunch(Random.Range(1, 3), suicideBomberRat);
                     //closestSpawner().SpawnBunch(Random.Range(1, 3), suicideBomberRat);
                 }
             }
-            else if (MouseCount < MouseLimit)
+            else if (MouseCount < MouseLimit && enemiesToSpawn == EnemyStats.FactionType.mouse)
             {
                 MouseCount++;
                 //spawn mice over time
 
                 //33% shielded Mice, 66% normal mice
 
-                if (RandomNum <= basicMousePercentage)
+                if (RandomNum >= basicMousePercentage)
                 {
                     spawnpoint.SpawnBunch(Random.Range(1, 3), MouseBruiserWithShield);
                     //closestSpawner().SpawnBunch(Random.Range(1, 3), MouseBruiserWithShield);
                 }
 
-                if (RandomNum <= shieldRatPercentage)
+                if (RandomNum >= shieldRatPercentage)
                 {
                     spawnpoint.SpawnBunch(Random.Range(1, 3), MouseBruiser);
                     //closestSpawner().SpawnBunch(Random.Range(1, 3), MouseBruiser);
