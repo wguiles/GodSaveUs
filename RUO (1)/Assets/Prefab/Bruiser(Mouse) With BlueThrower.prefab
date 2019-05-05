@@ -217,7 +217,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 2080936330}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.1
+  m_Radius: 0.5
   m_Speed: 6
   m_Acceleration: 16
   avoidancePriority: 50
@@ -275,6 +275,7 @@ MonoBehaviour:
   _animator: {fileID: 3055007931428274596}
   mouseBabies: {fileID: 8801533494593558317, guid: f73c842439e75417d894306f600dd2cc,
     type: 3}
+  tethered: 0
   patrolPoints: []
 --- !u!95 &8003301437874803310
 Animator:

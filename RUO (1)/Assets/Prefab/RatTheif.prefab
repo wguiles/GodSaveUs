@@ -136,7 +136,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 108117094}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.1
+  m_Radius: 0.5
   m_Speed: 19
   m_Acceleration: 20
   avoidancePriority: 50
@@ -201,14 +201,15 @@ MonoBehaviour:
   speed: 13
   attackDamage: 2
   enemyHealthBar: {fileID: 7034890730828049255}
+  numCheese: 1
   CheeseStuff: {fileID: 1390263230913470, guid: 169deb98579fd5f45ba61a43a4ae6602,
     type: 3}
   enemyDeathExplosion: {fileID: 4423480776205789922, guid: b77201fbcddd244139e9f2b8be94af62,
     type: 3}
-  isTarget: 0
   target: {fileID: 5908325457432368837, guid: c88618b62eea94cb8914b980a3836b2f, type: 3}
   faction: 1
   playerStats: {fileID: 0}
+  playerController: {fileID: 0}
   _animator: {fileID: 0}
   cheeseList: []
   closestCheese: {fileID: 0}
