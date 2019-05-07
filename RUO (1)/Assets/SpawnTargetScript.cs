@@ -7,9 +7,12 @@ public class SpawnTargetScript : MonoBehaviour
     private EnemyStats CurrentTarget;
 
     public static SpawnTargetScript instance;
+    private PlayerController _player;
 
     private void Awake()
     {
+        _player = FindObjectOfType<PlayerController>();
+
         if (instance == null)
         {
             instance = this;
@@ -60,7 +63,7 @@ public class SpawnTargetScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!targetIsActive)
+        if (!targetIsActive && !_player.gameStarted)
         {
             FindObjectOfType<SpawnManager>().SpawnTargetEnemy();
         }
