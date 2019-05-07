@@ -9,6 +9,7 @@ public class LevelStats : MonoBehaviour
     public int cheeseLevelQuota;
     public int cheeseUpgradeQuota;
     public float timeLeft;
+    public const float TIME_TO_ADD = 5;
 
     public GameObject ResultsPanel;
 
@@ -65,6 +66,11 @@ public class LevelStats : MonoBehaviour
         LevelStarted = true;
         textCountDown.transform.parent.gameObject.SetActive(false);
 
+    }
+
+    public void AddTime()
+    {
+        timeLeft += TIME_TO_ADD;
     }
 
     public enum LevelType

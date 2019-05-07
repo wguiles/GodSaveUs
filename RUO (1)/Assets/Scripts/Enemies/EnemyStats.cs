@@ -178,6 +178,7 @@ public class EnemyStats : MonoBehaviour
             isTarget = false;
             numCheese = 20;
             SoundManager.instance.PlaySound("KillConfirmed");
+            GameObject.FindGameObjectWithTag("Level").GetComponent<LevelStats>().AddTime();
             SpawnTargetScript.instance.SetTargetIsActive(false);
         }
 
