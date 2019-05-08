@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.476
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.31313652, g: 0.3497126, b: 0.40725806, a: 0.476}
+  m_IndirectSpecularColor: {r: 0.31313646, g: 0.34971222, b: 0.40725762, a: 0.476}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1996,7 +1996,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.02875, y: 0.30722374}
   m_AnchorMax: {x: 0.33275002, y: 0.3953424}
-  m_AnchoredPosition: {x: 7.9996643, y: -5}
+  m_AnchoredPosition: {x: 7.999634, y: -5}
   m_SizeDelta: {x: -7, y: 2.7000008}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &181190373
@@ -19546,7 +19546,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.23125, y: 0}
   m_AnchorMax: {x: 0.36125, y: 0.39123273}
-  m_AnchoredPosition: {x: 1.3901367, y: -2.2000103}
+  m_AnchoredPosition: {x: 1.3901367, y: -2.200014}
   m_SizeDelta: {x: 1.0100021, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1592743358
@@ -21556,7 +21556,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.78000003, y: 0}
   m_AnchorMax: {x: 1, y: 0.2068959}
-  m_AnchoredPosition: {x: -24.400024, y: 30.100006}
+  m_AnchoredPosition: {x: -24.400024, y: 30.100037}
   m_SizeDelta: {x: -16, y: -63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1815900902
@@ -31162,10 +31162,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2080936333, guid: 328df6839d54b444aa8aea4d95d86e09, type: 3}
-      propertyPath: m_Speed
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 2080936331, guid: 328df6839d54b444aa8aea4d95d86e09, type: 3}
       propertyPath: patrolPoints.Array.size
       value: 4
@@ -31185,6 +31181,10 @@ PrefabInstance:
     - target: {fileID: 2080936331, guid: 328df6839d54b444aa8aea4d95d86e09, type: 3}
       propertyPath: patrolPoints.Array.data[3]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080936333, guid: 328df6839d54b444aa8aea4d95d86e09, type: 3}
+      propertyPath: m_Speed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 328df6839d54b444aa8aea4d95d86e09, type: 3}
@@ -37660,7 +37660,7 @@ GameObject:
   - component: {fileID: 8057642200510174937}
   m_Layer: 0
   m_Name: Level1
-  m_TagString: Untagged
+  m_TagString: Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -63,9 +63,8 @@ public class SpawnTargetScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!targetIsActive && !_player.gameStarted)
-        {
+
             FindObjectOfType<SpawnManager>().SpawnTargetEnemy();
-        }
+
     }
 }

@@ -29,4 +29,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EnemyTest 2.unity
     guid: b23bbfa3360a9485f918e721cff205cb
+  - enabled: 1
+    path: Assets/Scenes/TownsSpaceScene.unity
+    guid: abfe4f4338393e44b901ffa74d8fdb18
+  - enabled: 1
+    path: Assets/Scenes/ApartmentScene.unity
+    guid: 3f74f9afb8a5c0a41815411c87e00b52
+  - enabled: 1
+    path: Assets/Scenes/PowerPlantScene.unity
+    guid: 0ab53a74e07f58b4797f7cce0246733c
+  - enabled: 1
+    path: Assets/Scenes/PowerPlantScene2.unity
+    guid: 4d68b56956a734dd88907c7cd8533978
+  - enabled: 1
+    path: Assets/Scenes/CityScene.unity
+    guid: 5f991cc453b62744b80f99b54087f61c
   m_configObjects: {}
