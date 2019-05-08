@@ -25,14 +25,17 @@ public class LightScript : MonoBehaviour
 
     //Method for breaking the lamp
     //To be called by explosions
+    //NOTE: THIS IS SPECIFICALLY FOR THE STREET LAMP AND NOT THE BAR LIGHT
     public void BreakLights()
     {
         //play sound effect
-        
+
+
         //turn off the light
+        light.SetActive(false);
 
         // turn on broken glass
-
+        this.gameObject.transform.Find("Shards").gameObject.SetActive(true);
     }
 
 
