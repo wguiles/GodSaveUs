@@ -155,20 +155,25 @@ public class SpawnManager : MonoBehaviour
             }
             else if (MouseCount < MouseLimit && enemiesToSpawn == EnemyStats.FactionType.mouse)
             {
-                MouseCount++;
+
                 //spawn mice over time
 
+                int randomNum2;
                 //33% shielded Mice, 66% normal mice
 
-                if (RandomNum >= basicMousePercentage)
+                if (RandomNum < basicMousePercentage)
                 {
-                    spawnpoint.SpawnBunch(Random.Range(1, 3), MouseBruiserWithShield);
+                    randomNum2 = Random.Range(1, 3);
+                    spawnpoint.SpawnBunch(randomNum2, MouseBruiserWithShield);
+                    MouseCount += randomNum2;
                     //closestSpawner().SpawnBunch(Random.Range(1, 3), MouseBruiserWithShield);
                 }
 
-                if (RandomNum >= shieldRatPercentage)
+                if (RandomNum < shieldRatPercentage)
                 {
-                    spawnpoint.SpawnBunch(Random.Range(1, 3), MouseBruiser);
+                    randomNum2 = Random.Range(1, 3);
+                    spawnpoint.SpawnBunch(randomNum2, MouseBruiser);
+                    MouseCount += randomNum2;
                     //closestSpawner().SpawnBunch(Random.Range(1, 3), MouseBruiser);
                 }
             }
