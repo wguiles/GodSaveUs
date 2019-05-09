@@ -1605,7 +1605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.02875, y: 0.30722374}
   m_AnchorMax: {x: 0.33275002, y: 0.3953424}
-  m_AnchoredPosition: {x: 7.999756, y: -5}
+  m_AnchoredPosition: {x: 7.9997864, y: -5}
   m_SizeDelta: {x: -7, y: 2.7000008}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &181190373
@@ -1656,7 +1656,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: EnemyTest 2
+          m_StringArgument: Apartment
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1988256586}
@@ -10547,7 +10547,7 @@ GameObject:
   - component: {fileID: 1076230278}
   - component: {fileID: 1076230281}
   m_Layer: 5
-  m_Name: Main Menu Button
+  m_Name: NextLevelButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10570,7 +10570,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.061250005, y: 0.042222224}
   m_AnchorMax: {x: 0.9537501, y: 0.17744443}
-  m_AnchoredPosition: {x: -0.5, y: -1.5}
+  m_AnchoredPosition: {x: -0.5, y: -1.5000153}
   m_SizeDelta: {x: 9.869995, y: 2.899994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1076230278
@@ -14157,7 +14157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.69217074, y: 0.19021627}
   m_AnchorMax: {x: 0.742122, y: 0.8326488}
-  m_AnchoredPosition: {x: 0.72998047, y: -0.76049805}
+  m_AnchoredPosition: {x: 0.72998047, y: -0.76049614}
   m_SizeDelta: {x: 5.8, y: 4.353}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1403961269
@@ -19025,7 +19025,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.061250005, y: 0.042222224}
   m_AnchorMax: {x: 0.9537501, y: 0.17744443}
-  m_AnchoredPosition: {x: -0.5, y: -1.5}
+  m_AnchoredPosition: {x: -0.5, y: -1.5000153}
   m_SizeDelta: {x: 9.869995, y: 2.899994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1989632905
@@ -22697,12 +22697,12 @@ MonoBehaviour:
   basicRatPercentage: 0.6
   shieldRatPercentage: 0.5
   suicideBomberPercentage: 0.4
-  ratSpawnRate: 2
+  ratSpawnRate: 7
   MouseLimit: 20
   basicMousePercentage: 0.6
   shieldMousePercentage: 0.2
   flameThrowerPercentage: 0.2
-  mouseSpawnRate: 2
+  mouseSpawnRate: 7
   enemiesToSpawn: 1
   spawnRate: 6
 --- !u!4 &6252391268352755374
