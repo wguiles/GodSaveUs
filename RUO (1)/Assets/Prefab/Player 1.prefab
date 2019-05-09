@@ -172,6 +172,8 @@ MonoBehaviour:
   mine: {fileID: 4135810396550430317, guid: 12848e80967ec4ee9bf954fd8f4b8538, type: 3}
   slashProjectile: {fileID: 2997900097212856163, guid: 667ee05bca59c49878f83c3604598b8c,
     type: 3}
+  hasBombUpgrade: 1
+  hasProjectileSpeedUpgrade: 0
   slashDamage: 2
   mineDamage: 6
 --- !u!65 &8483953836953342798
@@ -202,7 +204,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 120
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!114 &8483953836953342800
 MonoBehaviour:
   m_ObjectHideFlags: 0

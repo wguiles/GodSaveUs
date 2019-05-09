@@ -161,7 +161,7 @@ public class SpawnManager : MonoBehaviour
                 int randomNum2;
                 //33% shielded Mice, 66% normal mice
 
-                if (RandomNum < basicMousePercentage)
+                if (RandomNum < shieldMousePercentage)
                 {
                     randomNum2 = Random.Range(1, 3);
                     spawnpoint.SpawnBunch(randomNum2, MouseBruiserWithShield);
@@ -169,10 +169,18 @@ public class SpawnManager : MonoBehaviour
                     //closestSpawner().SpawnBunch(Random.Range(1, 3), MouseBruiserWithShield);
                 }
 
-                if (RandomNum < shieldRatPercentage)
+                if (RandomNum < basicMousePercentage)
                 {
                     randomNum2 = Random.Range(1, 3);
                     spawnpoint.SpawnBunch(randomNum2, MouseBruiser);
+                    MouseCount += randomNum2;
+                    //closestSpawner().SpawnBunch(Random.Range(1, 3), MouseBruiser);
+                }
+
+                if (RandomNum < flameThrowerPercentage)
+                {
+                    randomNum2 = Random.Range(1, 2);
+                    spawnpoint.SpawnBunch(randomNum2, BlueThrower);
                     MouseCount += randomNum2;
                     //closestSpawner().SpawnBunch(Random.Range(1, 3), MouseBruiser);
                 }

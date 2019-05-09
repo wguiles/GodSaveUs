@@ -21,6 +21,7 @@ public class LevelStats : MonoBehaviour
     bool levelComplete;
 
     public TextMeshProUGUI textCountDown;
+    public TextMeshProUGUI LocationText;
 
     private void Start()
     {
@@ -65,6 +66,10 @@ public class LevelStats : MonoBehaviour
         textCountDown.text = "GO!";
         LevelStarted = true;
         textCountDown.transform.parent.gameObject.SetActive(false);
+
+        yield return new WaitForSeconds(3.0f);
+
+        LocationText.gameObject.SetActive(false);
 
     }
 
@@ -155,12 +160,15 @@ public class LevelStats : MonoBehaviour
         //If the time limit for the level is up
         if(timeLeft <= 0 && !levelComplete)
         {
+
+
             gameObject.SetActive(false);
 
 
 
             SoundManager.instance.StopAllSounds();
             ResultsPanel.SetActive(true);
+            FindObjectOfType<ResultsScreenScript>().KillMe = enemies;
             SoundManager.instance.PlaySound("ResultsMusic");
 
             ResultsPanel.GetComponent<ResultsScreenScript>().FillBar();

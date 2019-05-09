@@ -184,10 +184,11 @@ public class EnforcerScript : EnemyStats
      IEnumerator SpeedNormal()
     {
         Debug.Log("speed lowered");
-        player.GetComponent<PlayerController>().speed = 3.0f; 
+    
+        PlayerController.speed = 3.0f;
         yield return new WaitForSeconds(1.5f);
         Debug.Log("speed normal");
-        player.GetComponent<PlayerController>().speed = 10.0f; 
+        PlayerController.speed = 10.0f; 
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 }

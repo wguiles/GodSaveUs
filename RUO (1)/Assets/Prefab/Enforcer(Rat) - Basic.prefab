@@ -203,7 +203,7 @@ MonoBehaviour:
   agent: {fileID: 0}
   health: 5
   speed: 5
-  attackDamage: 3
+  attackDamage: 2
   enemyHealthBar: {fileID: 337486873307057952}
   numCheese: 1
   CheeseStuff: {fileID: 1390263230913470, guid: 9dea054cf9ab3614299937c5c8a9ccc3,

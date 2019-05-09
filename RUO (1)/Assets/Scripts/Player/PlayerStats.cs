@@ -14,7 +14,7 @@ public class PlayerStats : MonoBehaviour
      private MenuManager menuManager;
     public GameObject DeathScreen;
 
-    int MAX_HEATLH = 10;
+    static int MAX_HEATLH = 10;
 
     //general stats
     private int health = 10;
@@ -39,6 +39,7 @@ public class PlayerStats : MonoBehaviour
     public void SetMaxHealth(int amount)
     {
         MAX_HEATLH += amount;
+        health = MAX_HEATLH;
     }
 
 
@@ -109,7 +110,7 @@ public class PlayerStats : MonoBehaviour
         float secondsPassed = 0.0f;
         Debug.Log("Blink Called");
 
-        float temp = GetComponent<PlayerController>().speed;
+        float temp = PlayerController.speed;
         //GetComponent<PlayerController>().speed = 0;
 
         while (secondsPassed < recoverTime)
@@ -130,7 +131,7 @@ public class PlayerStats : MonoBehaviour
 
         transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.white;
         Debug.Log("Blink Left");
-        GetComponent<PlayerController>().speed = temp;
+        PlayerController.speed = temp;
         recovering = false;
 
     }

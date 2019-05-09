@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerUpgrades : MonoBehaviour
 {
     //put the percent in as a decimal value
-    private float percentChange = .15f;
+    private float percentChange = 1.25f;
 
     private PlayerStats playerStats;
     private PlayerController playerController;
@@ -62,7 +62,7 @@ public class PlayerUpgrades : MonoBehaviour
     public void MiceUpgrade2()
     {
         //Upgrade specific stuff
-        playerController.dashRechargeTime += (playerController.dashRechargeTime * percentChange);
+        PlayerController.dashRechargeTime += (PlayerController.dashRechargeTime * percentChange);
 
         //Update UI (if applicable)
         Debug.Log("MiceUpgrade2 ----- ACTIVATED -----");
@@ -74,6 +74,8 @@ public class PlayerUpgrades : MonoBehaviour
     {
         //Upgrade specific stuff
 
+        PlayerController.hasBombUpgrade = true;
+        //increase bomb radius
 
         //Update UI (if applicable)
         Debug.Log("RatUpgrade3 ----- ACTIVATED -----");
@@ -83,6 +85,8 @@ public class PlayerUpgrades : MonoBehaviour
     {
         //Upgrade specific stuff
 
+        //faster projectile
+        PlayerController.fireRate *= 2;
 
         //Update UI (if applicable)
         Debug.Log("MiceUpgrade3 ----- ACTIVATED -----");

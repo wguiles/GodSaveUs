@@ -10,8 +10,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool canMove;
     private bool canMelee;
     private MovementType moveType = MovementType.standard;
-    public float speed = 10f;
-    public float fireRate;
+    public static float speed = 10f;
+    public static float fireRate = 3.5f;
 
     public bool gameStarted;
 
@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     [Header("Dash")]
     public float dashSpeed;
     public float dashTime;
-    public float dashRechargeTime;
+    public static float dashRechargeTime;
     private Vector3 dashDirection;
     private bool isDashing = false;
     private bool canDash = true;
@@ -40,8 +40,11 @@ public class PlayerController : MonoBehaviour
     public enum MovementType { standard, scurry, auto };
     RaycastHit hit;
 
+    public static bool hasBombUpgrade = false;
+    public bool hasProjectileSpeedUpgrade = false;
+
     //Nicole added these in becuase they were hardcoded elsewhere
-    public int slashDamage = 2;
+    public static int slashDamage = 2;
     public int mineDamage = 6;
 
     private bool triggerInUse;
@@ -231,6 +234,14 @@ public class PlayerController : MonoBehaviour
     public void DropMine()
     {
         GameObject mine = Instantiate(this.mine, transform.position, Quaternion.identity);
+
+        if (hasBombUpgrade)
+        {
+            GameObject mine2 = Instantiate(this.mine, transform.position + new Vector3(2f, 2f, 0f), Quaternion.identity);
+            GameObject mine3 = Instantiate(this.mine, transform.position + new Vector3(-2f,-2f, 0f), Quaternion.identity);
+            GameObject mine4 = Instantiate(this.mine, transform.position + new Vector3(2f,- 2f, 0f), Quaternion.identity);
+            GameObject mine5 = Instantiate(this.mine, transform.position + new Vector3(-2f, 2f, 0f), Quaternion.identity);
+        }
         //mine.GetComponent<ProjectileScript>().StartTimer();
     }
 

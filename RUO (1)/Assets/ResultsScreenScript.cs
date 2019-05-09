@@ -26,7 +26,8 @@ public class ResultsScreenScript : MonoBehaviour
 
     private bool firstSoundPlayed;
     private bool secondSoundPlayed;
-    
+
+    public LevelStats.LevelType KillMe;
 
     // Start is called before the first frame update
     void Start()
@@ -86,6 +87,8 @@ public class ResultsScreenScript : MonoBehaviour
                     secondSoundPlayed = true;
                 }
                 achievementText.text = "Upgrade Quota Aquired!";
+
+                GivePlayerUpgrade();
             }
 
             if (cheeseAmountCount >= CheeseAmountAquired)
@@ -125,4 +128,42 @@ public class ResultsScreenScript : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
+
+    public void GivePlayerUpgrade()
+    {
+        //check rats or mice
+        //check level 
+
+        if (KillMe == LevelStats.LevelType.Rats)
+        {
+            if (SceneManager.GetActiveScene().name == "TownsSpaceScene")
+            {
+                FindObjectOfType<PlayerUpgrades>().MiceUpgrade1();
+            }
+            else if (SceneManager.GetActiveScene().name == "ApartmentScene")
+            {
+                FindObjectOfType<PlayerUpgrades>().MiceUpgrade2();
+            }
+            else if (SceneManager.GetActiveScene().name == "PowerPlantScene2")
+            {
+                FindObjectOfType<PlayerUpgrades>().MiceUpgrade3();
+            }
+        }
+        else if (KillMe == LevelStats.LevelType.Mice)
+        {
+            if (SceneManager.GetActiveScene().name == "TownsSpaceScene")
+            {
+                FindObjectOfType<PlayerUpgrades>().RatUpgrade1();
+            }
+            else if (SceneManager.GetActiveScene().name == "ApartmentScene")
+            {
+                FindObjectOfType<PlayerUpgrades>().RatUpgrade2();
+            }
+            else if (SceneManager.GetActiveScene().name == "PowerPlantScene2")
+            {
+                FindObjectOfType<PlayerUpgrades>().RatUpgrade3();
+            }
+        }
+    }
+
 }
