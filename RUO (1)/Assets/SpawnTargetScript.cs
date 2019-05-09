@@ -49,7 +49,7 @@ public class SpawnTargetScript : MonoBehaviour
 
     public void SpawnTarget(GameObject targetToSpawn, Vector3 spawnLocation)
     {
-        if (!targetIsActive)
+        if (!targetIsActive && FindObjectOfType<PlayerController>().gameStarted)
         {
             GameObject spawnedObj = Instantiate(targetToSpawn, spawnLocation, Quaternion.identity);
             setCurrentTarget(spawnedObj.GetComponent<EnemyStats>());
