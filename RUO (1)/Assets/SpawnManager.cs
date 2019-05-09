@@ -116,30 +116,40 @@ public class SpawnManager : MonoBehaviour
 
             //check if it's rats or mice
 
-            int RandomNum = Random.Range(0, 10);
+            float RandomNum = Random.Range(0, 1);
 
             if (enemiesToSpawn == EnemyStats.FactionType.rat && RatCount < RatLimit)
             {
-                RatCount++;
+               
+                int secondRandomNum;
                 //Spawn Rats over time
 
                 //20% suicide bombers, 30% shielded Rats, 50%
 
-                if (RandomNum > basicRatPercentage)
+                if (RandomNum < shieldRatPercentage)
                 {
-                    spawnpoint.SpawnBunch(Random.Range(1, 2), ratWithShield);
+                    secondRandomNum = Random.Range(1, 2);
+                    spawnpoint.SpawnBunch(secondRandomNum, ratWithShield);
+                    RatCount += secondRandomNum;
+
                     //closestSpawner().SpawnBunch(Random.Range(1, 2), ratWithShield);
                 }
 
-                if (RandomNum > shieldRatPercentage)
+                if (RandomNum < basicRatPercentage)
                 {
-                    spawnpoint.SpawnBunch(Random.Range(3, 6), ratEnforcerBasic);
+                    secondRandomNum = Random.Range(1, 2);
+                    spawnpoint.SpawnBunch(secondRandomNum, ratEnforcerBasic);
+                    RatCount += secondRandomNum;
+
                     //closestSpawner().SpawnBunch(Random.Range(3, 6), ratEnforcerBasic);
                 }
 
-                if (RandomNum > suicideBomberPercentage)
+                if (RandomNum < suicideBomberPercentage)
                 {
-                    spawnpoint.SpawnBunch(Random.Range(1, 3), suicideBomberRat);
+                    secondRandomNum = Random.Range(1, 3);
+                    spawnpoint.SpawnBunch(secondRandomNum, suicideBomberRat);
+                    RatCount += secondRandomNum;
+
                     //closestSpawner().SpawnBunch(Random.Range(1, 3), suicideBomberRat);
                 }
             }
