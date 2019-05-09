@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ResultsScreenScript : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class ResultsScreenScript : MonoBehaviour
 
     private bool firstSoundPlayed;
     private bool secondSoundPlayed;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -54,18 +56,25 @@ public class ResultsScreenScript : MonoBehaviour
             
             if (cheeseAmountCount >= LevelQuotaAquired)
             {
-
+                MenuButton.GetComponentInChildren<TextMeshProUGUI>().text = "Press <A> To Continue";
                 if (!firstSoundPlayed)
                 {
                     SoundManager.instance.PlaySound("KillConfirmed");
                     firstSoundPlayed = true;
+                   
                 }
+
 
                 achievementText.text = "Level Quota Aquired!";
 
                 resultsText.text = ((int)cheeseAmountCount).ToString() + " / " + UpgradeQuotaAquired.ToString();
 
                 UpgradeResultsCircle.fillAmount = Mathf.Lerp(0f, 1f, ((float)cheeseAmountCount - LevelQuotaAquired) / (UpgradeQuotaAquired - LevelQuotaAquired));
+            }
+
+            else
+            {
+                MenuButton.GetComponentInChildren<TextMeshProUGUI>().text = "Press <A> To Retry";
             }
 
             if (cheeseAmountCount >= UpgradeQuotaAquired)
@@ -83,8 +92,8 @@ public class ResultsScreenScript : MonoBehaviour
             {
                 SoundManager.instance.StopSound("BarFillUp");
                 StartCoroutine(ActivateMenuButton());
+             
             }
-          
         }
     }
 
@@ -101,5 +110,19 @@ public class ResultsScreenScript : MonoBehaviour
     {
         yield return new WaitForSeconds(2.0f);
         MenuButton.SetActive(true);
+    }
+
+    public void loadNextLevel()
+    {
+        SoundManager.instance.StopAllSounds();
+
+        if (cheeseAmountCount > LevelQuotaAquired)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }
