@@ -173,6 +173,8 @@ public class LevelStats : MonoBehaviour
 
             ResultsPanel.GetComponent<ResultsScreenScript>().FillBar();
 
+           
+
             levelComplete = true;
 
             //Time.timeScale = 0;
@@ -194,7 +196,7 @@ public class LevelStats : MonoBehaviour
                 menuManager.ActivateLevelCompleteScreen("Upgrade Quota Met");
 
                 //Determine which faction
-                if (enemies == LevelType.Rats)
+                if (enemies == LevelType.Mice)
                 {
                     if (currentLevel == 1)
                     {
@@ -217,7 +219,7 @@ public class LevelStats : MonoBehaviour
                         player.GetComponent<PlayerUpgrades>().RatUpgrade4();
                     }
                 }
-                else if(enemies == LevelType.Mice)
+                else if(enemies == LevelType.Rats)
                 {
                     if (currentLevel == 1)
                     {
@@ -245,6 +247,7 @@ public class LevelStats : MonoBehaviour
                 //{
                 //    
                 //}
+
 
                 gameObject.SetActive(false);
             }

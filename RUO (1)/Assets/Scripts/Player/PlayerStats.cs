@@ -24,6 +24,12 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         menuManager = FindObjectOfType<MenuManager>();
+
+        if (PlayerUpgrades.Rat2)
+        {
+            MAX_HEATLH = 20;
+            health = MAX_HEATLH;
+        }
     }
 
     public int GetCheeseCount()

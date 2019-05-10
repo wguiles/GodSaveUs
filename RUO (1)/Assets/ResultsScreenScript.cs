@@ -29,10 +29,11 @@ public class ResultsScreenScript : MonoBehaviour
 
     public LevelStats.LevelType KillMe;
 
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     private void OnEnable()
@@ -80,6 +81,7 @@ public class ResultsScreenScript : MonoBehaviour
 
             if (cheeseAmountCount >= UpgradeQuotaAquired)
             {
+                GivePlayerUpgrade();
 
                 if (!secondSoundPlayed)
                 {
@@ -88,7 +90,7 @@ public class ResultsScreenScript : MonoBehaviour
                 }
                 achievementText.text = "Upgrade Quota Aquired!";
 
-                GivePlayerUpgrade();
+                //GivePlayerUpgrade();
             }
 
             if (cheeseAmountCount >= CheeseAmountAquired)
@@ -134,34 +136,35 @@ public class ResultsScreenScript : MonoBehaviour
         //check rats or mice
         //check level 
 
+
         if (KillMe == LevelStats.LevelType.Rats)
         {
             if (SceneManager.GetActiveScene().name == "TownsSpaceScene")
             {
-                FindObjectOfType<PlayerUpgrades>().MiceUpgrade1();
+                PlayerUpgrades.thisPlayerUpgrades.MiceUpgrade1();
             }
             else if (SceneManager.GetActiveScene().name == "ApartmentScene")
             {
-                FindObjectOfType<PlayerUpgrades>().MiceUpgrade2();
+                PlayerUpgrades.thisPlayerUpgrades.MiceUpgrade2();
             }
             else if (SceneManager.GetActiveScene().name == "PowerPlantScene2")
             {
-                FindObjectOfType<PlayerUpgrades>().MiceUpgrade3();
+                PlayerUpgrades.thisPlayerUpgrades.MiceUpgrade3();
             }
         }
         else if (KillMe == LevelStats.LevelType.Mice)
         {
             if (SceneManager.GetActiveScene().name == "TownsSpaceScene")
             {
-                FindObjectOfType<PlayerUpgrades>().RatUpgrade1();
+                PlayerUpgrades.thisPlayerUpgrades.RatUpgrade1();
             }
             else if (SceneManager.GetActiveScene().name == "ApartmentScene")
             {
-                FindObjectOfType<PlayerUpgrades>().RatUpgrade2();
+                PlayerUpgrades.thisPlayerUpgrades.RatUpgrade2();
             }
             else if (SceneManager.GetActiveScene().name == "PowerPlantScene2")
             {
-                FindObjectOfType<PlayerUpgrades>().RatUpgrade3();
+                PlayerUpgrades.thisPlayerUpgrades.RatUpgrade3();
             }
         }
     }

@@ -44,13 +44,25 @@ public class PlayerController : MonoBehaviour
     public bool hasProjectileSpeedUpgrade = false;
 
     //Nicole added these in becuase they were hardcoded elsewhere
-    public static int slashDamage = 2;
+    public int slashDamage = 2;
     public int mineDamage = 6;
 
     private bool triggerInUse;
 
     void Start()
     {
+
+        if (PlayerUpgrades.Rat1)
+            slashDamage = 16;
+
+        if (PlayerUpgrades.Rat3)
+            hasBombUpgrade = true;
+
+        if (PlayerUpgrades.Mouse3)
+            fireRate = 2.5f;
+
+        
+
         GetComponentInChildren<Animator>().SetTrigger("Idle");
 
         canMove = true;
@@ -90,7 +102,7 @@ public class PlayerController : MonoBehaviour
 
             if (!isDashing)
             {
-                if (PlayerUpgrades.Player1SpeedUpgrade)
+                if (PlayerUpgrades.Mouse1)
                     speed = 13;
                 else
                     speed = 10;
