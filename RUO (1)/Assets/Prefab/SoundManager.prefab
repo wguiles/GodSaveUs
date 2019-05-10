@@ -67,7 +67,7 @@ MonoBehaviour:
   - name: BulletSoundS
     clip: {fileID: 8300000, guid: 808324a0947434b2f80701bb015082f5, type: 3}
     source: {fileID: 0}
-    volume: 1
+    volume: 0.6
     pitch: 1
   - name: EnemyHurtS
     clip: {fileID: 8300000, guid: ed8a567d95682d142b6f0d1e30da73b7, type: 3}
@@ -159,3 +159,4 @@ MonoBehaviour:
     source: {fileID: 0}
     volume: 1
     pitch: 1
+  slider: {fileID: 0}

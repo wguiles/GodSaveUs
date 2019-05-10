@@ -5596,42 +5596,28 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'The year is 2078.
+  m_text: 'RUO, cheese in paw, makes his escape...
 
 
-
-
-    The world as we know it has come to an end.
-
-
-
-    Mankind has gone extinct. The relics of the past still stand, but their creators
-    are no longer around to see them.
-
-
-    However, in humanity''s absence, a new race has risen to power.
-
-
-    With the fate of the world in their paws, rodents worldwide have begun to clash,
-    vying for control in a lawless society.
-
-
-    In one particular city, the war between Mice and Rats is nearing its climax...
-
-
-    and between them stands RUO, a rodent of unidentified origin with the ability
-    to choose their own destiny.
-
-
-    RUO will either survive the upcoming carnage...
-
-
-    ...Or die amongst the Street Rats.
+    Uncertain of his future, he continues on, knowing he can never come back to the
+    war he started...
 
 
 
 
 
+
+
+
+    RUO will return in Cheesse Chase 3: The Queso for more money
+
+
+
+
+    Thanks for playing!
+
+
+    Press start to start the game with current upgrades
 
 
 '
@@ -5681,7 +5667,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 605
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -5704,12 +5690,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 619716367}
-    characterCount: 647
+    characterCount: 284
     spriteCount: 0
-    spaceCount: 131
-    wordCount: 114
+    spaceCount: 62
+    wordCount: 49
     linkCount: 0
-    lineCount: 36
+    lineCount: 22
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -9998,7 +9984,7 @@ Animator:
   m_GameObject: {fileID: 1055025180}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: af3b69758f2f6490d8312d36417c90ee, type: 2}
+  m_Controller: {fileID: 9100000, guid: 340e231dc1991485b8fac61defb92ab2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -14058,7 +14044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.69217074, y: 0.19021627}
   m_AnchorMax: {x: 0.742122, y: 0.8326488}
-  m_AnchoredPosition: {x: 0.72998047, y: -0.76049805}
+  m_AnchoredPosition: {x: 0.72998047, y: -0.76049995}
   m_SizeDelta: {x: 5.8, y: 4.353}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1403961269

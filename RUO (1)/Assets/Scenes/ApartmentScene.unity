@@ -7846,7 +7846,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 3
+  m_text: 03
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9127d10a61ba54838b9163f0d604bcc4, type: 2}
   m_sharedMaterial: {fileID: 21558259574095326, guid: 9127d10a61ba54838b9163f0d604bcc4,
@@ -7924,11 +7924,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -15074,7 +15074,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.69217074, y: 0.19021627}
   m_AnchorMax: {x: 0.742122, y: 0.8326488}
-  m_AnchoredPosition: {x: 0.72998047, y: -0.7604971}
+  m_AnchoredPosition: {x: 0.72998047, y: -0.76049805}
   m_SizeDelta: {x: 5.8, y: 4.353}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1403961269
@@ -17263,9 +17263,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Show the rats you mean business by grinding down some mice into mincemeat.
-    They could get you some damage and weapon upgrades.
-
+  m_text: 'Help the rats defend thier home from the mice outsiders. Show the mice
+    no mercy, and the rats will strengthen your armor to take more hits
 
 
     Cheese needed for next upgrade: 250'
@@ -17338,10 +17337,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 11.810973, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1699991362}
-    characterCount: 164
+    characterCount: 175
     spriteCount: 0
-    spaceCount: 29
-    wordCount: 28
+    spaceCount: 32
+    wordCount: 32
     linkCount: 0
     lineCount: 8
     pageCount: 1
@@ -18799,8 +18798,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Prove your loyalty to the crown by cleansing the streets of rat filth,
-    and the mice just might offer you upgrades in speed and mobility.
+  m_text: 'Hit the rats on their home turf, the slums, to gain the mice approval.
+    If you get enough cheese, the mice will modify your dash to recharge faster.
 
 
     Cheese needed for next upgrade:  250'
@@ -18873,10 +18872,10 @@ MonoBehaviour:
   m_margin: {x: 12.093589, y: 9.205019, z: 12.447063, w: 18.977615}
   m_textInfo:
     textComponent: {fileID: 1903751330}
-    characterCount: 174
+    characterCount: 185
     spriteCount: 0
-    spaceCount: 32
-    wordCount: 31
+    spaceCount: 35
+    wordCount: 34
     linkCount: 0
     lineCount: 8
     pageCount: 1
@@ -19946,7 +19945,7 @@ MonoBehaviour:
   playerCheeseAmount: {fileID: 1370820720}
   quotaText: {fileID: 212026770}
   inGameArrow: {fileID: 1978762077}
-  currentMaxTime: 10
+  currentMaxTime: 60
 --- !u!1 &1989632900
 GameObject:
   m_ObjectHideFlags: 0
@@ -23861,15 +23860,15 @@ MonoBehaviour:
   RatCount: 0
   MouseCount: 0
   RatLimit: 25
-  basicRatPercentage: 0.6
-  shieldRatPercentage: 0.5
-  suicideBomberPercentage: 0.4
-  ratSpawnRate: 7
+  basicRatPercentage: 0.3
+  shieldRatPercentage: 0.25
+  suicideBomberPercentage: 0.2
+  ratSpawnRate: 14
   MouseLimit: 20
-  basicMousePercentage: 0.6
-  shieldMousePercentage: 0.2
-  flameThrowerPercentage: 0.2
-  mouseSpawnRate: 7
+  basicMousePercentage: 0.3
+  shieldMousePercentage: 0.1
+  flameThrowerPercentage: 0.1
+  mouseSpawnRate: 14
   enemiesToSpawn: 1
   spawnRate: 6
 --- !u!4 &6252391268352755374
@@ -32839,9 +32838,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7e2ded2dd514cb5bfe98adead3d636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cheeseLevelQuota: 250
-  cheeseUpgradeQuota: 400
-  timeLeft: 10
+  cheeseLevelQuota: 100
+  cheeseUpgradeQuota: 250
+  timeLeft: 60
   ResultsPanel: {fileID: 2143294725}
   LevelStarted: 0
   textCountDown: {fileID: 766913707}

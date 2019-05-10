@@ -11737,7 +11737,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 3
+  m_text: 03
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9127d10a61ba54838b9163f0d604bcc4, type: 2}
   m_sharedMaterial: {fileID: 21558259574095326, guid: 9127d10a61ba54838b9163f0d604bcc4,
@@ -11815,11 +11815,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -26244,9 +26244,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Show the rats you mean business by grinding down some mice into mincemeat.
-    They could get you some damage and weapon upgrades.
-
+  m_text: 'The rats need help to capture the power plant. Steal it from the mice,
+    and the rats will upgrade your bomb sachel to drop more bombs at once.
 
 
     Cheese needed for next upgrade: 250'
@@ -26319,10 +26318,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 11.810973, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1699991362}
-    characterCount: 164
+    characterCount: 178
     spriteCount: 0
-    spaceCount: 29
-    wordCount: 28
+    spaceCount: 34
+    wordCount: 34
     linkCount: 0
     lineCount: 8
     pageCount: 1
@@ -29273,8 +29272,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Prove your loyalty to the crown by cleansing the streets of rat filth,
-    and the mice just might offer you upgrades in speed and mobility.
+  m_text: 'Help mice keep control of the power plant to power their cannons. Exceed
+    in your performance and the mice will uprgade your laser''s fire rate.
 
 
     Cheese needed for next upgrade:  250'
@@ -29347,7 +29346,7 @@ MonoBehaviour:
   m_margin: {x: 12.093589, y: 9.205019, z: 12.447063, w: 18.977615}
   m_textInfo:
     textComponent: {fileID: 1903751330}
-    characterCount: 174
+    characterCount: 180
     spriteCount: 0
     spaceCount: 32
     wordCount: 31
@@ -35216,10 +35215,10 @@ MonoBehaviour:
   RatCount: 0
   MouseCount: 0
   RatLimit: 25
-  basicRatPercentage: 1
-  shieldRatPercentage: 1
-  suicideBomberPercentage: 1
-  ratSpawnRate: 2
+  basicRatPercentage: 0.4
+  shieldRatPercentage: 0.2
+  suicideBomberPercentage: 0.4
+  ratSpawnRate: 4
   MouseLimit: 20
   basicMousePercentage: 0.4
   shieldMousePercentage: 0.2
@@ -43381,9 +43380,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7e2ded2dd514cb5bfe98adead3d636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cheeseLevelQuota: 0
-  cheeseUpgradeQuota: 0
-  timeLeft: 10
+  cheeseLevelQuota: 150
+  cheeseUpgradeQuota: 200
+  timeLeft: 60
   ResultsPanel: {fileID: 2143294725}
   LevelStarted: 0
   textCountDown: {fileID: 766913707}

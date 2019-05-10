@@ -20063,6 +20063,7 @@ MonoBehaviour:
   CheeseAmountAquired: 0
   fillSpeed: 50
   MenuButton: {fileID: 1076230276}
+  KillMe: 0
 --- !u!1 &2143755084
 GameObject:
   m_ObjectHideFlags: 0
@@ -28349,6 +28350,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2080936333, guid: 328df6839d54b444aa8aea4d95d86e09, type: 3}
+      propertyPath: m_Speed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2080936331, guid: 328df6839d54b444aa8aea4d95d86e09, type: 3}
       propertyPath: patrolPoints.Array.size
       value: 4
@@ -28368,10 +28373,6 @@ PrefabInstance:
     - target: {fileID: 2080936331, guid: 328df6839d54b444aa8aea4d95d86e09, type: 3}
       propertyPath: patrolPoints.Array.data[3]
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2080936333, guid: 328df6839d54b444aa8aea4d95d86e09, type: 3}
-      propertyPath: m_Speed
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 328df6839d54b444aa8aea4d95d86e09, type: 3}
@@ -34419,6 +34420,7 @@ MonoBehaviour:
   ResultsPanel: {fileID: 2143294725}
   LevelStarted: 0
   textCountDown: {fileID: 766913707}
+  LocationText: {fileID: 0}
   enemies: 0
 --- !u!4 &8057642200510174938
 Transform:

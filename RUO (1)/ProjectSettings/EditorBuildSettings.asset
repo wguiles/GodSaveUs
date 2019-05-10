@@ -9,23 +9,23 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/NewNicoleTest.unity
-    guid: fbd76ecdd9f1032489ef5f7e5b36f958
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/PlayerChoice.unity
-    guid: 218eb9067087b4598ac6b4439d1fef71
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/MouseScene.unity
-    guid: 20ce9d6029a604a7b800ff96f81982d6
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/RatScene.unity
-    guid: e639a280b510b496090be38eef29529e
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/PostProductionUI_2.unity
-    guid: 5d9c2cd00da2746c2a18f516720f81d9
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/TownsSpaceScene.unity
     guid: abfe4f4338393e44b901ffa74d8fdb18
@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CityScene.unity
     guid: 5f991cc453b62744b80f99b54087f61c
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: 848a0c3032d764ca0b648808768ecd3e
   m_configObjects: {}

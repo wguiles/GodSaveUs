@@ -123,6 +123,11 @@ public class ResultsScreenScript : MonoBehaviour
 
         if (cheeseAmountCount > LevelQuotaAquired)
         {
+            if (SceneManager.GetActiveScene().name == "Ending")
+            {
+                SceneManager.LoadScene(1);
+            }
+
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         else

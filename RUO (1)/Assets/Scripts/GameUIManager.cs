@@ -71,7 +71,7 @@ public class GameUIManager : MonoBehaviour
 
     public void SetTimeRemaining(float TimeRemaining)
     {
-        if (TimeRemaining < 10)
+        if (TimeRemaining < 10 && FindObjectOfType<LevelStats>().LevelStarted)
         {
             timeLeftText.text =  "0" + ((int)TimeRemaining).ToString();
         }
