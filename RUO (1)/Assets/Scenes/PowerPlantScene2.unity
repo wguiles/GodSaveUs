@@ -16876,7 +16876,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.061250005, y: 0.042222224}
   m_AnchorMax: {x: 0.9537501, y: 0.17744443}
-  m_AnchoredPosition: {x: -0.5, y: -1.5003357}
+  m_AnchoredPosition: {x: -0.5, y: -1.5003662}
   m_SizeDelta: {x: 9.869995, y: 2.899994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1076230278
@@ -30846,7 +30846,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.061250005, y: 0.042222224}
   m_AnchorMax: {x: 0.9537501, y: 0.17744443}
-  m_AnchoredPosition: {x: -0.5, y: -1.5003357}
+  m_AnchoredPosition: {x: -0.5, y: -1.5003662}
   m_SizeDelta: {x: 9.869995, y: 2.899994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1989632905
@@ -35216,13 +35216,13 @@ MonoBehaviour:
   MouseCount: 0
   RatLimit: 25
   basicRatPercentage: 0.4
-  shieldRatPercentage: 0.2
+  shieldRatPercentage: 0.105
   suicideBomberPercentage: 0.4
-  ratSpawnRate: 4
+  ratSpawnRate: 6
   MouseLimit: 20
   basicMousePercentage: 0.4
   shieldMousePercentage: 0.2
-  flameThrowerPercentage: 0.15
+  flameThrowerPercentage: 0.188
   mouseSpawnRate: 12
   enemiesToSpawn: 0
   spawnRate: 6

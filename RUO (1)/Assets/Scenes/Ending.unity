@@ -1739,7 +1739,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.02875, y: 0.30722374}
   m_AnchorMax: {x: 0.33275002, y: 0.3953424}
-  m_AnchoredPosition: {x: 7.9995117, y: -5}
+  m_AnchoredPosition: {x: 7.99942, y: -5}
   m_SizeDelta: {x: -7, y: 2.7000008}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &181190373
@@ -5609,7 +5609,7 @@ MonoBehaviour:
 
 
 
-    RUO will return in Cheesse Chase 3: The Queso for more money
+    RUO will return in Cheese Chase 3: The Queso for more money
 
 
 
@@ -5690,7 +5690,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 619716367}
-    characterCount: 284
+    characterCount: 283
     spriteCount: 0
     spaceCount: 62
     wordCount: 49
@@ -10336,7 +10336,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.061250005, y: 0.042222224}
   m_AnchorMax: {x: 0.9537501, y: 0.17744443}
-  m_AnchoredPosition: {x: -0.5, y: -1.5003052}
+  m_AnchoredPosition: {x: -0.5, y: -1.5004272}
   m_SizeDelta: {x: 9.869995, y: 2.899994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1076230278
@@ -14044,7 +14044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.69217074, y: 0.19021627}
   m_AnchorMax: {x: 0.742122, y: 0.8326488}
-  m_AnchoredPosition: {x: 0.72998047, y: -0.76049995}
+  m_AnchoredPosition: {x: 0.72998047, y: -0.76049805}
   m_SizeDelta: {x: 5.8, y: 4.353}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1403961269
@@ -19116,7 +19116,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.061250005, y: 0.042222224}
   m_AnchorMax: {x: 0.9537501, y: 0.17744443}
-  m_AnchoredPosition: {x: -0.5, y: -1.5003052}
+  m_AnchoredPosition: {x: -0.5, y: -1.5004272}
   m_SizeDelta: {x: 9.869995, y: 2.899994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1989632905
@@ -25230,13 +25230,13 @@ MonoBehaviour:
   MouseCount: 0
   RatLimit: 5
   basicRatPercentage: 0.456
-  shieldRatPercentage: 0
-  suicideBomberPercentage: 0
+  shieldRatPercentage: 0.242
+  suicideBomberPercentage: 0.146
   ratSpawnRate: 2
   MouseLimit: 20
   basicMousePercentage: 0.338
-  shieldMousePercentage: 0
-  flameThrowerPercentage: 0
+  shieldMousePercentage: 0.163
+  flameThrowerPercentage: 0.275
   mouseSpawnRate: 9
   enemiesToSpawn: 1
   spawnRate: 6
@@ -29658,8 +29658,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7e2ded2dd514cb5bfe98adead3d636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cheeseLevelQuota: 100
-  cheeseUpgradeQuota: 125
+  cheeseLevelQuota: 300
+  cheeseUpgradeQuota: 0
   timeLeft: 60
   ResultsPanel: {fileID: 2143294725}
   LevelStarted: 0

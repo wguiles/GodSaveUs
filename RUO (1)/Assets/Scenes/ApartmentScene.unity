@@ -12188,7 +12188,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.061250005, y: 0.042222224}
   m_AnchorMax: {x: 0.9537501, y: 0.17744443}
-  m_AnchoredPosition: {x: -0.5, y: -1.5003357}
+  m_AnchoredPosition: {x: -0.5, y: -1.5003662}
   m_SizeDelta: {x: 9.869995, y: 2.899994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1076230278
@@ -21298,7 +21298,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.061250005, y: 0.042222224}
   m_AnchorMax: {x: 0.9537501, y: 0.17744443}
-  m_AnchoredPosition: {x: -0.5, y: -1.5003357}
+  m_AnchoredPosition: {x: -0.5, y: -1.5003662}
   m_SizeDelta: {x: 9.869995, y: 2.899994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1989632905
@@ -25075,13 +25075,13 @@ MonoBehaviour:
   MouseCount: 0
   RatLimit: 25
   basicRatPercentage: 0.3
-  shieldRatPercentage: 0.25
-  suicideBomberPercentage: 0.2
+  shieldRatPercentage: 0.119
+  suicideBomberPercentage: 0.049
   ratSpawnRate: 14
   MouseLimit: 20
-  basicMousePercentage: 0.3
-  shieldMousePercentage: 0.1
-  flameThrowerPercentage: 0.1
+  basicMousePercentage: 0.201
+  shieldMousePercentage: 0.049
+  flameThrowerPercentage: 0.033
   mouseSpawnRate: 14
   enemiesToSpawn: 1
   spawnRate: 6
@@ -34052,8 +34052,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7e2ded2dd514cb5bfe98adead3d636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cheeseLevelQuota: 100
-  cheeseUpgradeQuota: 250
+  cheeseLevelQuota: 125
+  cheeseUpgradeQuota: 175
   timeLeft: 60
   ResultsPanel: {fileID: 2143294725}
   LevelStarted: 0
