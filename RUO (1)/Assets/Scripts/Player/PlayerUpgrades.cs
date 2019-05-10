@@ -10,6 +10,8 @@ public class PlayerUpgrades : MonoBehaviour
     private PlayerStats playerStats;
     private PlayerController playerController;
 
+    public static bool Player1SpeedUpgrade = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,7 @@ public class PlayerUpgrades : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     // -------------------- Upgrades for first level --------------------
@@ -30,7 +32,8 @@ public class PlayerUpgrades : MonoBehaviour
     {
         //Upgrade specific stuff
         playerController.SetSlashDamage((int)(playerController.GetSlashDamage() * percentChange));
-
+        //PlayerController.speed = 20;
+        //Player1SpeedUpgrade = true;
         //Update UI (if applicable)
         Debug.Log("RatUpgrade1  ----- ACTIVATED -----");
     }
@@ -40,7 +43,7 @@ public class PlayerUpgrades : MonoBehaviour
     {
         //Upgrade specific stuff
         playerController.SetSpeed(playerController.GetSpeed() * percentChange);
-
+        Player1SpeedUpgrade = true;
         //Update UI (if applicable)
         Debug.Log("MiceUpgrade1 ----- ACTIVATED -----");
     }

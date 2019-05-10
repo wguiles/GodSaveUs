@@ -110,8 +110,7 @@ public class PlayerStats : MonoBehaviour
         float secondsPassed = 0.0f;
         Debug.Log("Blink Called");
 
-        float temp = PlayerController.speed;
-        //GetComponent<PlayerController>().speed = 0;
+
 
         while (secondsPassed < recoverTime)
         {
@@ -131,7 +130,7 @@ public class PlayerStats : MonoBehaviour
 
         transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.white;
         Debug.Log("Blink Left");
-        PlayerController.speed = temp;
+
         recovering = false;
 
     }

@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool canMove;
     private bool canMelee;
     private MovementType moveType = MovementType.standard;
-    public static float speed = 10f;
+    public float speed = 10f;
     public static float fireRate = 3.5f;
 
     public bool gameStarted;
@@ -87,6 +87,14 @@ public class PlayerController : MonoBehaviour
             Debug.DrawRay(this.transform.position, gunChild.transform.up);
 
             fireTime += Time.deltaTime * fireRate;
+
+            if (!isDashing)
+            {
+                if (PlayerUpgrades.Player1SpeedUpgrade)
+                    speed = 13;
+                else
+                    speed = 10;
+            }
 
             if (!isDashing && canMove)
             {
