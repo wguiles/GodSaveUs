@@ -55,7 +55,7 @@ public class ResultsScreenScript : MonoBehaviour
                 cheeseAmountCount += Time.deltaTime * fillSpeed;
                 resultsText.text = ((int)cheeseAmountCount).ToString() + " / " + LevelQuotaAquired.ToString();
             }
-            
+
             if (cheeseAmountCount >= LevelQuotaAquired)
             {
                 MenuButton.GetComponentInChildren<TextMeshProUGUI>().text = "Press <A> To Continue";
@@ -63,7 +63,7 @@ public class ResultsScreenScript : MonoBehaviour
                 {
                     SoundManager.instance.PlaySound("KillConfirmed");
                     firstSoundPlayed = true;
-                   
+
                 }
 
 
@@ -97,7 +97,7 @@ public class ResultsScreenScript : MonoBehaviour
             {
                 SoundManager.instance.StopSound("BarFillUp");
                 StartCoroutine(ActivateMenuButton());
-             
+
             }
         }
     }
@@ -106,8 +106,8 @@ public class ResultsScreenScript : MonoBehaviour
     {
         CheeseAmountAquired = FindObjectOfType<PlayerStats>().GetCheeseCount();
         FindObjectOfType<PlayerStats>().gameObject.SetActive(false);
-        LevelQuotaAquired = 100;
-        UpgradeQuotaAquired = 250;
+        LevelQuotaAquired = 200;
+        UpgradeQuotaAquired = 300;
         ResultsShowing = true;
     }
 
@@ -147,11 +147,18 @@ public class ResultsScreenScript : MonoBehaviour
             {
                 PlayerUpgrades.thisPlayerUpgrades.MiceUpgrade2();
             }
-            else if (SceneManager.GetActiveScene().name == "PowerPlantScene2")
-            {
-                PlayerUpgrades.thisPlayerUpgrades.MiceUpgrade3();
-            }
+            FindObjectOfType<PlayerUpgrades>().MiceUpgrade1();
         }
+        else if (SceneManager.GetActiveScene().name == "ApartmentScene")
+        {
+            FindObjectOfType<PlayerUpgrades>().MiceUpgrade2();
+        }
+
+        else if (SceneManager.GetActiveScene().name == "PowerPlantScene2")
+        {
+            PlayerUpgrades.thisPlayerUpgrades.MiceUpgrade3();
+        }
+
         else if (KillMe == LevelStats.LevelType.Mice)
         {
             if (SceneManager.GetActiveScene().name == "TownsSpaceScene")
@@ -163,10 +170,13 @@ public class ResultsScreenScript : MonoBehaviour
                 PlayerUpgrades.thisPlayerUpgrades.RatUpgrade2();
             }
             else if (SceneManager.GetActiveScene().name == "PowerPlantScene2")
+
             {
                 PlayerUpgrades.thisPlayerUpgrades.RatUpgrade3();
             }
+            {
+                FindObjectOfType<PlayerUpgrades>().RatUpgrade3();
+            }
         }
     }
-
 }
