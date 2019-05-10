@@ -1706,7 +1706,7 @@ PrefabInstance:
     - target: {fileID: 6112158572934989143, guid: 4f988704bc7f94a998185eae7c76f92f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 35.252598
+      value: 33.548
       objectReference: {fileID: 0}
     - target: {fileID: 6112158572934989143, guid: 4f988704bc7f94a998185eae7c76f92f,
         type: 3}
@@ -1716,7 +1716,7 @@ PrefabInstance:
     - target: {fileID: 6112158572934989143, guid: 4f988704bc7f94a998185eae7c76f92f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.548712
+      value: 10.9
       objectReference: {fileID: 0}
     - target: {fileID: 6112158572934989143, guid: 4f988704bc7f94a998185eae7c76f92f,
         type: 3}
@@ -1761,7 +1761,7 @@ PrefabInstance:
     - target: {fileID: 6112158572934989143, guid: 4f988704bc7f94a998185eae7c76f92f,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 213.82147
+      value: 217.24263
       objectReference: {fileID: 0}
     - target: {fileID: 6112158572934989143, guid: 4f988704bc7f94a998185eae7c76f92f,
         type: 3}
@@ -4262,7 +4262,7 @@ PrefabInstance:
     - target: {fileID: 6112158572934989143, guid: 4f988704bc7f94a998185eae7c76f92f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.548712
+      value: 11.4
       objectReference: {fileID: 0}
     - target: {fileID: 6112158572934989143, guid: 4f988704bc7f94a998185eae7c76f92f,
         type: 3}
@@ -5003,7 +5003,7 @@ PrefabInstance:
     - target: {fileID: 6112158572934989143, guid: 4f988704bc7f94a998185eae7c76f92f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.718597
+      value: 32.63
       objectReference: {fileID: 0}
     - target: {fileID: 6112158572934989143, guid: 4f988704bc7f94a998185eae7c76f92f,
         type: 3}
@@ -5058,7 +5058,7 @@ PrefabInstance:
     - target: {fileID: 6112158572934989143, guid: 4f988704bc7f94a998185eae7c76f92f,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 163.75587
+      value: 165.39343
       objectReference: {fileID: 0}
     - target: {fileID: 6112158572934989143, guid: 4f988704bc7f94a998185eae7c76f92f,
         type: 3}
@@ -12188,7 +12188,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.061250005, y: 0.042222224}
   m_AnchorMax: {x: 0.9537501, y: 0.17744443}
-  m_AnchoredPosition: {x: -0.5, y: -1.5003662}
+  m_AnchoredPosition: {x: -0.5, y: -1.5003967}
   m_SizeDelta: {x: 9.869995, y: 2.899994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1076230278
@@ -14592,7 +14592,7 @@ PrefabInstance:
     - target: {fileID: 6112158572934989143, guid: 4f988704bc7f94a998185eae7c76f92f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.548712
+      value: 11.4
       objectReference: {fileID: 0}
     - target: {fileID: 6112158572934989143, guid: 4f988704bc7f94a998185eae7c76f92f,
         type: 3}
@@ -18236,7 +18236,7 @@ MonoBehaviour:
     no mercy, and the rats will strengthen your armor to take more hits
 
 
-    Cheese needed for next upgrade: 250'
+    Cheese needed for next upgrade: 175'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9127d10a61ba54838b9163f0d604bcc4, type: 2}
   m_sharedMaterial: {fileID: 21558259574095326, guid: 9127d10a61ba54838b9163f0d604bcc4,
@@ -18311,7 +18311,7 @@ MonoBehaviour:
     spaceCount: 32
     wordCount: 32
     linkCount: 0
-    lineCount: 8
+    lineCount: 7
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -20016,7 +20016,7 @@ MonoBehaviour:
     If you get enough cheese, the mice will modify your dash to recharge faster.
 
 
-    Cheese needed for next upgrade:  250'
+    Cheese needed for next upgrade:  175'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9127d10a61ba54838b9163f0d604bcc4, type: 2}
   m_sharedMaterial: {fileID: 21558259574095326, guid: 9127d10a61ba54838b9163f0d604bcc4,
@@ -21298,7 +21298,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.061250005, y: 0.042222224}
   m_AnchorMax: {x: 0.9537501, y: 0.17744443}
-  m_AnchoredPosition: {x: -0.5, y: -1.5003662}
+  m_AnchoredPosition: {x: -0.5, y: -1.5003967}
   m_SizeDelta: {x: 9.869995, y: 2.899994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1989632905
