@@ -27,7 +27,7 @@ public class PlayerStats : MonoBehaviour
 
         if (PlayerUpgrades.Rat2)
         {
-            MAX_HEATLH = 20;
+            MAX_HEATLH = 15;
             health = MAX_HEATLH;
         }
     }

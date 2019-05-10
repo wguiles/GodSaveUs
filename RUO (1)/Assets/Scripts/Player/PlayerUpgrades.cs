@@ -84,7 +84,7 @@ public class PlayerUpgrades : MonoBehaviour
     public void MiceUpgrade2()
     {
         //Upgrade specific stuff
-        PlayerController.dashRechargeTime *= percentChange;
+        //PlayerController.dashRechargeTime *= percentChange;
         Mouse2 = true;
         //Update UI (if applicable)
         Debug.Log("MiceUpgrade2 ----- ACTIVATED -----");

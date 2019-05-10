@@ -37,6 +37,11 @@ public class GameUIManager : MonoBehaviour
     //The time remaining at the beginning of the level
     public float currentMaxTime;
 
+    private void Start()
+    {
+        currentMaxTime = FindObjectOfType<LevelStats>().timeLeft;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -66,8 +71,16 @@ public class GameUIManager : MonoBehaviour
 
     public void SetTimeRemaining(float TimeRemaining)
     {
+        if (TimeRemaining < 10)
+        {
+            timeLeftText.text =  "0" + ((int)TimeRemaining).ToString();
+        }
+        else 
+        {
+            timeLeftText.text = ((int)TimeRemaining).ToString();
+        }
         timeLeftSlider.fillAmount = TimeRemaining / currentMaxTime;
-        timeLeftText.text = ((int)TimeRemaining).ToString();
+
     }
 
     public void UpdateCheeseAmount(int amount)

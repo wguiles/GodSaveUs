@@ -88,7 +88,7 @@ public class ResultsScreenScript : MonoBehaviour
                     SoundManager.instance.PlaySound("KillConfirmed");
                     secondSoundPlayed = true;
                 }
-                achievementText.text = "Upgrade Quota Aquired!";
+
 
                 //GivePlayerUpgrade();
             }
@@ -102,12 +102,12 @@ public class ResultsScreenScript : MonoBehaviour
         }
     }
 
-    public void FillBar()
+    public void FillBar(int levelQuota, int UpgradeQuota)
     {
         CheeseAmountAquired = FindObjectOfType<PlayerStats>().GetCheeseCount();
         FindObjectOfType<PlayerStats>().gameObject.SetActive(false);
-        LevelQuotaAquired = 200;
-        UpgradeQuotaAquired = 300;
+        LevelQuotaAquired = levelQuota;
+        UpgradeQuotaAquired = UpgradeQuota;
         ResultsShowing = true;
     }
 
@@ -142,40 +142,37 @@ public class ResultsScreenScript : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "TownsSpaceScene")
             {
                 PlayerUpgrades.thisPlayerUpgrades.MiceUpgrade1();
+                achievementText.text = "Speed Boost Aquired!";
             }
             else if (SceneManager.GetActiveScene().name == "ApartmentScene")
             {
                 PlayerUpgrades.thisPlayerUpgrades.MiceUpgrade2();
+                achievementText.text = "Dash Recharge Upgrade Aquired!";
             }
-            FindObjectOfType<PlayerUpgrades>().MiceUpgrade1();
-        }
-        else if (SceneManager.GetActiveScene().name == "ApartmentScene")
-        {
-            FindObjectOfType<PlayerUpgrades>().MiceUpgrade2();
+            else if (SceneManager.GetActiveScene().name == "PowerPlantScene2")
+            {
+                achievementText.text = "Fire Rate Upgrade Aquired!";
+                PlayerUpgrades.thisPlayerUpgrades.MiceUpgrade3();
+            }
         }
 
-        else if (SceneManager.GetActiveScene().name == "PowerPlantScene2")
-        {
-            PlayerUpgrades.thisPlayerUpgrades.MiceUpgrade3();
-        }
 
         else if (KillMe == LevelStats.LevelType.Mice)
         {
             if (SceneManager.GetActiveScene().name == "TownsSpaceScene")
             {
+                achievementText.text = "Damage Upgrade Aquired!";
                 PlayerUpgrades.thisPlayerUpgrades.RatUpgrade1();
             }
             else if (SceneManager.GetActiveScene().name == "ApartmentScene")
             {
+                achievementText.text = "Max Health Upgrade Aquired!";
                 PlayerUpgrades.thisPlayerUpgrades.RatUpgrade2();
             }
             else if (SceneManager.GetActiveScene().name == "PowerPlantScene2")
-
             {
+                achievementText.text = "Multibomb Upgrade Aquired!";
                 PlayerUpgrades.thisPlayerUpgrades.RatUpgrade3();
-            }
-            {
-                FindObjectOfType<PlayerUpgrades>().RatUpgrade3();
             }
         }
     }

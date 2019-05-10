@@ -57,7 +57,16 @@ public class LevelStats : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             secondsLeft--;
             SoundManager.instance.PlaySound("Countdown");
-            textCountDown.text = secondsLeft.ToString();
+
+            if (secondsLeft < 10)
+            {
+                textCountDown.text = "0" + secondsLeft.ToString();
+            }
+            else
+            {
+                textCountDown.text = secondsLeft.ToString();
+            }
+
         }
 
         FindObjectOfType<PlayerController>().gameStarted = true;
@@ -84,6 +93,7 @@ public class LevelStats : MonoBehaviour
         Mice
     }
 
+
     public LevelType enemies;
 
     public void SetLevelType(LevelType type)
@@ -104,46 +114,14 @@ public class LevelStats : MonoBehaviour
 
     }
 
-    private void EnableRats()
+    public void EnableRats()
     {
-        foreach(Transform t in transform)
-        {
-            //EnemyStats temp = t.GetComponent<EnemyStats>();
-
-            //if (temp != null)
-            //{
-            //    if (temp.faction == EnemyStats.FactionType.rat)
-            //        temp.gameObject.SetActive(true);
-            //    else
-            //        temp.gameObject.SetActive(false);
-            //}
-
-            if (t.gameObject.name == "Rats")
-            {
-                t.gameObject.SetActive(true);
-            }
-        }
+        enemies = LevelType.Rats;
     }
 
-    private void EnableMice()
+    public void EnableMice()
     {
-        foreach (Transform t in transform)
-        {
-            //EnemyStats temp = t.GetComponent<EnemyStats>();
-
-            //if (temp != null)
-            //{
-            //    if (temp.faction == EnemyStats.FactionType.mouse)
-            //        temp.gameObject.SetActive(true);
-            //    else
-            //        temp.gameObject.SetActive(false);
-            //}
-
-            if (t.gameObject.name == "Mice")
-            {
-                t.gameObject.SetActive(true);
-            }
-        }
+        enemies = LevelType.Mice;
     }
 
     private void Update()
@@ -171,7 +149,7 @@ public class LevelStats : MonoBehaviour
             FindObjectOfType<ResultsScreenScript>().KillMe = enemies;
             SoundManager.instance.PlaySound("ResultsMusic");
 
-            ResultsPanel.GetComponent<ResultsScreenScript>().FillBar();
+            ResultsPanel.GetComponent<ResultsScreenScript>().FillBar(cheeseLevelQuota, cheeseUpgradeQuota);
 
            
 
