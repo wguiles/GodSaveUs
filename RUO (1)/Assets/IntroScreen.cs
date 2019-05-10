@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class IntroScreen : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class IntroScreen : MonoBehaviour
             gameStarted = true;
             StartCoroutine(WaitToLoadStartScreen());
         }
-        else
+        else if (SceneManager.GetActiveScene().name != "TownsSpaceScene") 
         {
             SkipIntro();
         }
