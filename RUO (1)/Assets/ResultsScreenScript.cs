@@ -104,8 +104,8 @@ public class ResultsScreenScript : MonoBehaviour
     {
         CheeseAmountAquired = FindObjectOfType<PlayerStats>().GetCheeseCount();
         FindObjectOfType<PlayerStats>().gameObject.SetActive(false);
-        LevelQuotaAquired = 100;
-        UpgradeQuotaAquired = 250;
+        LevelQuotaAquired = 200;
+        UpgradeQuotaAquired = 300;
         ResultsShowing = true;
     }
 
