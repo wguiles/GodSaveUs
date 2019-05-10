@@ -18,7 +18,7 @@ public class IntroScreen : MonoBehaviour
             gameStarted = true;
             StartCoroutine(WaitToLoadStartScreen());
         }
-        else if (SceneManager.GetActiveScene().name != "TownsSpaceScene") 
+        else if (SceneManager.GetActiveScene().name == "TownsSpaceScene") 
         {
             SkipIntro();
         }
