@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     [Header("Dash")]
     public float dashSpeed;
     public float dashTime;
-    public static float dashRechargeTime;
+    public float dashRechargeTime;
     private Vector3 dashDirection;
     private bool isDashing = false;
     private bool canDash = true;
@@ -59,7 +59,12 @@ public class PlayerController : MonoBehaviour
             hasBombUpgrade = true;
 
         if (PlayerUpgrades.Mouse3)
-            fireRate = 2.5f;
+            fireRate = 7.0f;
+
+        if (PlayerUpgrades.Mouse2)
+            dashRechargeTime = 0.0f;
+        else
+            dashRechargeTime = 0.2f;
 
         
 
@@ -290,7 +295,7 @@ public class PlayerController : MonoBehaviour
         isDashing = false;
         gameObject.layer = 0;
 
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(dashRechargeTime);
         direction = 1.0f;
         canDash = true;
 
